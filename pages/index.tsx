@@ -19,7 +19,7 @@ export default function Home() {
       </Head>
 
       <section className="bg-gradient-to-b from-white to-cyan-50 py-20 px-8">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
           <div className="md:order-last mx-auto">
             <Image
               src="/assets/hero.svg"
@@ -55,7 +55,7 @@ export default function Home() {
       </section>
 
       <section className="bg-cyan-50 py-20 px-8">
-        <div className="container mx-auto text-center">
+        <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl text-gray-600 font-semibold">
             Get blocks and templates ready to use
           </h2>
@@ -102,7 +102,7 @@ export default function Home() {
       </section>
 
       <section className="bg-cyan-50 py-20 px-8">
-        <div className="container mx-auto text-center">
+        <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl text-gray-600 font-semibold">Blocks</h2>
           <h3 className="text-md text-gray-500 md:px-20">
             We design our blocks
@@ -187,7 +187,7 @@ export default function Home() {
       </section>
 
       <section className="bg-cyan-50 py-20 px-8">
-        <div className="container mx-auto text-center">
+        <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl text-gray-600 font-semibold">Templates</h2>
           <h3 className="text-md text-gray-500 md:px-20">
             We design our blocks
@@ -229,7 +229,7 @@ export default function Home() {
       </section>
 
       <section className="bg-gradient-to-b from-cyan-50 to-white py-20 px-8">
-        <div className="container mx-auto text-center">
+        <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl text-gray-600 font-semibold">Colors</h2>
           <h3 className="text-md text-gray-500 md:px-20">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
