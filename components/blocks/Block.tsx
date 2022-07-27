@@ -22,7 +22,8 @@ const Block = () => {
         </>
       </div>
       <div
-        className={`border-2 border-gray-500 rounded-lg h-[400px] lg:h-[600px] w-full ${viewSize}`}
+        className="border-2 border-gray-500 rounded-lg h-[400px] lg:h-[600px] w-full"
+        style={{ maxWidth: viewSize }}
       >
         <p>bloque</p>
       </div>
