@@ -22,7 +22,9 @@
       "@/icons/*": ["assets/icons/*"],
       "@/logos/*": ["assets/logos/*"],
       "@/context/*": ["context/*"],
-      "@/styles/*": ["styles/*"]
+      "@/styles/*": ["styles/*"],
+      "@/lib/*": ["lib/*"],
+      "@/interface/*": ["interface/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
