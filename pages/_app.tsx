@@ -5,7 +5,7 @@ import DefaultLayout from '@/layouts/DefaultLayout';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <DefaultLayout>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </DefaultLayout>
   );
 }
