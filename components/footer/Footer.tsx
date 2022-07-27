@@ -1,28 +1,27 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link';
+import Logo from '@/components/header/Logo';
 
 const Footer = () => {
   return (
-    <footer className="h-16 border-b border-gray-300 flex items-center px-8">
-      <section className="max-w-7xl flex items-center justify-between w-full mx-auto">
-        <Link href="/">
-          <a>
-            <section className="text-blue-500 flex gap-2 items-center">
-              <span className="text-gray-800 font-bold text-lg">
-                TailwindFan
-              </span>
-            </section>
-          </a>
-        </Link>
-        <nav className="text-gray-800 font-semibold items-center justify-end gap-8 md:flex hidden">
-          <Link href="/blocks">Blocks</Link>
-          <Link href="/learn">Learn</Link>
-          <Link href="/blocks">
-            <a className="bg-cyan-700 hover:bg-cyan-900 transition duration-300 text-white rounded-lg px-4 py-3">
-              Custom UI
+    <footer className="bg-gray-100 p-8">
+      <section className="max-w-7xl w-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-start items-start">
+        <section className="space-y-2 col-span-1">
+          <Link href="/">
+            <a>
+              <section className="text-blue-500 flex gap-2 items-center">
+                <Logo />
+                <span className="text-gray-800 font-bold text-lg">
+                  TailwindFan
+                </span>
+              </section>
             </a>
           </Link>
-        </nav>
+          <p className="text-sm text-gray-600">Tailwind blocks ready to use</p>
+        </section>
+        <section className="col-span-1">
+          <Link href="/blocks">Blocks</Link>
+        </section>
       </section>
     </footer>
   );
