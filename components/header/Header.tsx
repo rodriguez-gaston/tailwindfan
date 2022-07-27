@@ -5,7 +5,7 @@ import Logo from '@/components/header/Logo';
 const Header = () => {
   return (
     <header className="h-16 border-b border-gray-300 flex items-center px-8">
-      <section className="flex items-center justify-between w-full mx-auto container">
+      <section className="max-w-7xl flex items-center justify-between w-full mx-auto">
         <Link href="/">
           <a>
             <section className="text-blue-500 flex gap-2 items-center">
