@@ -1,6 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link';
 import Logo from '@/components/header/Logo';
+import Instagram from '@/components/icons/Instagram';
+import Youtube from '@/components/icons/Youtube';
+import Github from '@/components/icons/Github';
 
 const Footer = () => {
   return (
@@ -18,9 +21,40 @@ const Footer = () => {
             </a>
           </Link>
           <p className="text-sm text-gray-600">Tailwind blocks ready to use</p>
+          <section className="flex gap-2">
+            <a
+              href="https://instagram.com/codewithgaston"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-gray-500 p-1 text-white rounded-full hover:bg-gray-700"
+            >
+              <Instagram />
+            </a>
+            <a
+              href="https://instagram.com/codewithgaston"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-gray-500 p-1 text-white rounded-full hover:bg-gray-700"
+            >
+              <Youtube />
+            </a>
+            <a
+              href="https://instagram.com/codewithgaston"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-gray-500 p-1 text-white rounded-full hover:bg-gray-700"
+            >
+              <Github />
+            </a>
+          </section>
         </section>
-        <section className="col-span-1">
+        <section className="col-span-1 flex flex-col text-gray-800 text-sm font-medium">
           <Link href="/blocks">Blocks</Link>
+          <Link href="/colors">Colors</Link>
+          <Link href="/learn">Learn</Link>
+        </section>
+        <section className="col-span-1 lg:col-span-2">
+          <p className="text-xs text-gray-500">by @codewithgaston</p>
         </section>
       </section>
     </footer>
