@@ -6,12 +6,9 @@ const Block = () => {
 
   return (
     <section className="space-y-4">
-      <section className="sm:flex sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
+      <section className="space-y-2">
         <h2 className="text-xl font-bold">Simple Button</h2>
-        <section className="flex items-center gap-2">
-          <section className="lg:flex gap-2 hidden pr-2 border-r-2 border-gray-500">
-            <BreakpointList setViewSize={setViewSize} />
-          </section>
+        <section className="flex items-center gap-4">
           <section className="flex gap-2">
             <button className="text-sm p-2 rounded-lg border-2 border-blue-800 hover:bg-blue-800 hover:text-white">
               View code
@@ -19,6 +16,9 @@ const Block = () => {
             <button className="text-sm p-2 rounded-lg border-2 border-blue-800 hover:bg-blue-800 hover:text-white">
               Copy code
             </button>
+          </section>
+          <section className="lg:flex gap-2 hidden pl-4 border-l-2 border-gray-500">
+            <BreakpointList setViewSize={setViewSize} />
           </section>
         </section>
       </section>
