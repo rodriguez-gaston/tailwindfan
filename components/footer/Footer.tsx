@@ -4,6 +4,7 @@ import Logo from '@/components/header/Logo';
 import Instagram from '@/components/icons/Instagram';
 import Youtube from '@/components/icons/Youtube';
 import Github from '@/components/icons/Github';
+import Medium from '@/components/icons/Medium';
 
 const Footer = () => {
   return (
@@ -31,7 +32,7 @@ const Footer = () => {
               <Instagram />
             </a>
             <a
-              href="https://instagram.com/codewithgaston"
+              href="https://www.youtube.com/channel/UC8mpmC8Zyd5ga2AC2pkQ2tA?sub_confirmation=1"
               target="_blank"
               rel="noreferrer"
               className="bg-gray-500 p-1 text-white rounded-full hover:bg-gray-700"
@@ -39,12 +40,20 @@ const Footer = () => {
               <Youtube />
             </a>
             <a
-              href="https://instagram.com/codewithgaston"
+              href="https://github.com/rodriguez-gaston"
               target="_blank"
               rel="noreferrer"
               className="bg-gray-500 p-1 text-white rounded-full hover:bg-gray-700"
             >
               <Github />
+            </a>
+            <a
+              href="https://medium.com/@codewithgaston"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-gray-500 p-1 text-white rounded-full hover:bg-gray-700"
+            >
+              <Medium />
             </a>
           </section>
         </section>
