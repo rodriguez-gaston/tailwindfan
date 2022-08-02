@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import Coffee from '@/components/icons/Coffee';
 
@@ -14,14 +13,17 @@ const DonationSticky = () => {
   return (
     <>
       {show && (
-        <Link href={'/donar'}>
-          <a className="fixed flex gap-2 items-center bottom-3 right-3 px-4 py-2 font-medium text-sm bg-blue-700 rounded-lg text-white">
-            <span>
-              <Coffee />
-            </span>
-            Support me
-          </a>
-        </Link>
+        <a
+          href="https://www.buymeacoffee.com/codewithgaston"
+          target="_blank"
+          className="fixed flex gap-2 items-center bottom-3 right-3 px-4 py-2 font-medium text-sm bg-blue-700 rounded-lg text-white"
+          rel="noreferrer"
+        >
+          <span>
+            <Coffee />
+          </span>
+          Support me
+        </a>
       )}
     </>
   );
