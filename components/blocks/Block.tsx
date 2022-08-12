@@ -63,7 +63,9 @@ const Block = () => {
             <section className="flex gap-2">
               <button
                 onClick={() => setShowExample(!showExample)}
-                className="text-sm p-2 rounded-lg border-2 border-blue-800 hover:bg-blue-800 hover:text-white"
+                className={`text-sm p-2 rounded-lg border-2 border-blue-800 hover:bg-blue-800 hover:text-white ${
+                  !showExample && 'bg-blue-800 text-white'
+                }`}
               >
                 <Code />
               </button>
