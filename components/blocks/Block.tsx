@@ -5,56 +5,39 @@ import Code from '@/components/icons/CodeSmall';
 import Heart from '@/components/icons/Heart';
 import prism from 'prismjs';
 
-const code = `
-<!-- Success -->
+interface IBlock {
+  id: string;
+  category: string;
+  title: string;
+  block: React.ReactElement;
+}
 
-<div
-  class="p-4 text-green-700 border rounded border-green-900/10 bg-green-50"
-  role="alert"
->
-  <strong class="text-sm font-medium"> Post has been published! </strong>
-</div>
-
-<!-- Warning -->
-
-<div
-  class="p-4 border rounded text-amber-700 bg-amber-50 border-amber-900/10"
-  role="alert"
->
-  <strong class="text-sm font-medium"> Post has been archived! </strong>
-</div>
-
-<!-- Alert -->
-
-<div
-  class="p-4 text-red-700 border rounded border-red-900/10 bg-red-50"
-  role="alert"
->
-  <strong class="text-sm font-medium"> Post has been deleted! </strong>
-</div>
-
-<!-- Info -->
-
-<div
-  class="p-4 border rounded text-sky-700 bg-sky-50 border-sky-900/10"
-  role="alert"
->
-  <strong class="text-sm font-medium"> Post has been updated! </strong>
-</div>
-`;
-
-const Block = () => {
+const Block = ({ id, title, category, block }: IBlock) => {
   const [viewSize, setViewSize] = useState<string>('w-full');
   const [showExample, setShowExample] = useState<boolean>(true);
+  const [code, setCode] = useState<string>('');
 
   useEffect(() => {
     prism.highlightAll();
   });
 
+  useEffect(() => {
+    async function fetchBlock() {
+      const response = await fetch(`/library/${category}/${id}.html`);
+      const htmlText = await response.text();
+
+      setCode(htmlText);
+
+      return;
+    }
+
+    fetchBlock();
+  });
+
   return (
     <section className="space-y-4">
       <section className="space-y-2">
-        <h2 className="text-xl font-bold">Simple Button</h2>
+        <h2 className="text-xl font-bold">{title}</h2>
         <section
           className="flex items-center justify-between gap-4"
           style={{ maxWidth: viewSize }}
@@ -89,10 +72,7 @@ const Block = () => {
         style={{ maxWidth: viewSize }}
       >
         {showExample ? (
-          <section className="bg-blue-500 p-4 flex justify-between">
-            <p className="text-white">Section</p>
-            <Code />
-          </section>
+          <>{block}</>
         ) : (
           <pre className="w-full h-full bg-gray-800">
             <code className="language-html">{code}</code>
