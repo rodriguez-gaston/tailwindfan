@@ -4,13 +4,7 @@ import Copy from '@/components/icons/Copy';
 import Code from '@/components/icons/CodeSmall';
 import Heart from '@/components/icons/Heart';
 import prism from 'prismjs';
-
-interface IBlock {
-  id: string;
-  category: string;
-  title: string;
-  block: React.ReactElement;
-}
+import { IBlock } from '@/interface/blocks';
 
 const Block = ({ id, title, category, block }: IBlock) => {
   const [viewSize, setViewSize] = useState<string>('w-full');
