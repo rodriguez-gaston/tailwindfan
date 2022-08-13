@@ -19,12 +19,10 @@
       "@/components/*": ["components/*"],
       "@/layouts/*": ["layouts/*"],
       "@/containers/*": ["containers/*"],
-      "@/icons/*": ["assets/icons/*"],
-      "@/logos/*": ["assets/logos/*"],
-      "@/context/*": ["context/*"],
       "@/styles/*": ["styles/*"],
       "@/lib/*": ["lib/*"],
-      "@/interface/*": ["interface/*"]
+      "@/interface/*": ["interface/*"],
+      "@/blocks/*": ["blocks/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
