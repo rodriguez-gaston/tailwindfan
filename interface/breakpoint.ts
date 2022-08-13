@@ -1,4 +1,4 @@
-export interface Breakpoint {
+export interface IBreakpoint {
   name: string;
   maxWidth: string;
 }
