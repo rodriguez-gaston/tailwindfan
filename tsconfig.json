@@ -20,7 +20,7 @@
       "@/layouts/*": ["layouts/*"],
       "@/containers/*": ["containers/*"],
       "@/styles/*": ["styles/*"],
-      "@/lib/*": ["lib/*"],
+      "@/data/*": ["data/*"],
       "@/interface/*": ["interface/*"],
       "@/blocks/*": ["blocks/*"]
     }
