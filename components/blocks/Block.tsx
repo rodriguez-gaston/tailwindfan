@@ -55,9 +55,6 @@ const Block = ({ block, viewSize = 'w-full' }: BlockProps) => {
                 <Copy />
               </button>
             </section>
-            {/* <section className="lg:flex gap-2 hidden pl-4 border-l-2 border-gray-500">
-              <BreakpointList setViewSize={setViewSize} />
-            </section> */}
           </section>
           <section>
             <button className="text-sm p-2 rounded-lg border-2 border-blue-800 hover:bg-blue-800 hover:text-white">
