@@ -1,6 +1,6 @@
 import React from 'react';
 import Breakpoint from '@/components/buttons/Breakpoint';
-import { allBreakpoints } from '@/data/breakpoints';
+import { allBreakpoints } from '@/data/Breakpoints';
 import { IBreakpoint } from '@/interface/breakpoint';
 
 interface Props {
@@ -18,6 +18,7 @@ const BreakpointList = ({ setViewSize }: Props) => {
             key={breakpoint.name}
             name={breakpoint.name}
             onClick={() => setViewSize(breakpoint.maxWidth)}
+            icon={breakpoint.icon}
           />
         );
       })}
