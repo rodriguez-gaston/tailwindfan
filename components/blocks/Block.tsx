@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import BreakpointList from '@/components/buttons/BreakpointList';
 import Copy from '@/components/icons/Copy';
 import Code from '@/components/icons/CodeSmall';
 import Heart from '@/components/icons/Heart';
 import prism from 'prismjs';
 import { IBlock } from '@/interface/blocks';
 
-const Block = ({ id, title, category, block }: IBlock) => {
-  const [viewSize, setViewSize] = useState<string>('w-full');
+interface BlockProps {
+  block: IBlock;
+  viewSize: string;
+}
+
+const Block = ({ block, viewSize = 'w-full' }: BlockProps) => {
   const [showExample, setShowExample] = useState<boolean>(true);
   const [code, setCode] = useState<string>('');
 
@@ -17,7 +20,9 @@ const Block = ({ id, title, category, block }: IBlock) => {
 
   useEffect(() => {
     async function fetchBlock() {
-      const response = await fetch(`/library/${category}/${id}.html`);
+      const response = await fetch(
+        `/library/${block.category}/${block.id}.html`,
+      );
       const htmlText = await response.text();
 
       setCode(htmlText);
@@ -31,7 +36,7 @@ const Block = ({ id, title, category, block }: IBlock) => {
   return (
     <section className="space-y-4">
       <section className="space-y-2">
-        <h2 className="text-xl font-bold">{title}</h2>
+        <h2 className="text-xl font-bold">{block.title}</h2>
         <section
           className="flex items-center justify-between gap-4"
           style={{ maxWidth: viewSize }}
@@ -50,9 +55,9 @@ const Block = ({ id, title, category, block }: IBlock) => {
                 <Copy />
               </button>
             </section>
-            <section className="lg:flex gap-2 hidden pl-4 border-l-2 border-gray-500">
+            {/* <section className="lg:flex gap-2 hidden pl-4 border-l-2 border-gray-500">
               <BreakpointList setViewSize={setViewSize} />
-            </section>
+            </section> */}
           </section>
           <section>
             <button className="text-sm p-2 rounded-lg border-2 border-blue-800 hover:bg-blue-800 hover:text-white">
@@ -66,7 +71,7 @@ const Block = ({ id, title, category, block }: IBlock) => {
         style={{ maxWidth: viewSize }}
       >
         {showExample ? (
-          <>{block}</>
+          <>{block.block}</>
         ) : (
           <pre className="w-full h-full bg-gray-800">
             <code className="language-html">{code}</code>
