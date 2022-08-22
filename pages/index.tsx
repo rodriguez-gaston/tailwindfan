@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Head from 'next/head';
 import Link from 'next/link';
-import Image from 'next/image';
 import Devices from '@/components/icons/Devices';
 import Code from '@/components/icons/Code';
 import Moon from '@/components/icons/Moon';
@@ -19,28 +18,17 @@ export default function Home() {
       </Head>
 
       <section className="bg-gradient-to-b from-white to-cyan-50 py-20 px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-          <div className="md:order-last mx-auto">
-            <Image
-              src="/assets/hero.svg"
-              alt="UI Images"
-              width={600}
-              height={456.04}
-            />
-          </div>
-          <div className="space-y-8">
-            <h3 className="text-lg text-gray-600 font-semibold">
-              Get blocks and templates ready to use
-            </h3>
+        <section className="max-w-7xl mx-auto text-center">
+          <section className="space-y-4">
             <h1 className="text-6xl font-bold text-gray-800">
               Build your next project with a new look
             </h1>
             <h4 className="text-gray-600">
               50+ free blocks and premium templates built with Tailwind CSS
             </h4>
-            <div className="flex gap-5 font-semibold">
+            <section className="flex gap-5 font-semibold justify-center pt-4">
               <Link href="/contact">
-                <a className="bg-cyan-700 hover:bg-cyan-900 transition duration-300 text-white rounded-lg px-4 py-3">
+                <a className="border-2 border-cyan-700 hover:border-cyan-900 bg-cyan-700 hover:bg-cyan-900 transition duration-300 text-white rounded-lg px-4 py-3">
                   Custom UI
                 </a>
               </Link>
@@ -49,9 +37,9 @@ export default function Home() {
                   Explore Blocks
                 </a>
               </Link>
-            </div>
-          </div>
-        </div>
+            </section>
+          </section>
+        </section>
       </section>
 
       <section className="bg-cyan-50 py-20 px-8">
