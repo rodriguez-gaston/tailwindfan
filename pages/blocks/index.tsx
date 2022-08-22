@@ -9,10 +9,15 @@ const BlocksPage: NextPage = () => {
     <section className="py-10 px-8">
       <section className="max-w-7xl items-center justify-between mx-auto grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {data.map((category) => {
+          const blockCount = category.blocks.length;
+
           return (
             <Link href={`/blocks/${category.name}`} key={category.name}>
               <a className="p-4 rounded-lg border-2 border-blue-800 hover:bg-blue-800 hover:text-white">
-                {category.name}
+                <h2 className="font-bold">{category.name}</h2>
+                <p className="text-sm">
+                  {`${blockCount} ${blockCount == 1 ? 'Block' : 'Blocks'}`}{' '}
+                </p>
               </a>
             </Link>
           );
