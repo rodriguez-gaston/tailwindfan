@@ -22,7 +22,8 @@
       "@/styles/*": ["styles/*"],
       "@/data/*": ["data/*"],
       "@/interface/*": ["interface/*"],
-      "@/blocks/*": ["blocks/*"]
+      "@/blocks/*": ["blocks/*"],
+      "@/utils/*": ["utils/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
