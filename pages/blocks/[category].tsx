@@ -3,6 +3,7 @@ import { NextPage, GetStaticProps, GetStaticPaths } from 'next';
 import { blocksList } from '@/data/Blocks';
 import Block from '@/components/blocks/Block';
 import BreakpointList from '@/components/buttons/BreakpointList';
+import Link from 'next/link';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const CategoryPage: NextPage = ({ category }: any) => {
@@ -42,13 +43,22 @@ const CategoryPage: NextPage = ({ category }: any) => {
             isScrolling && 'border-b border-gray-300'
           }`}
         >
-          <h1
-            className={`font-bold text-gray-800 ${
-              isScrolling ? 'text-3xl' : 'text-5xl'
-            }`}
-          >
-            {categoryData?.title}
-          </h1>
+          <section>
+            {isScrolling && (
+              <Link href={'/blocks'}>
+                <a className="text-gray-500 text-sm">
+                  &larr; Back to all blocks
+                </a>
+              </Link>
+            )}
+            <h1
+              className={`font-bold text-gray-800 ${
+                isScrolling ? 'text-3xl' : 'text-5xl'
+              }`}
+            >
+              {categoryData?.title}
+            </h1>
+          </section>
           <section className="lg:flex gap-2 hidden">
             <BreakpointList setViewSize={setViewSize} />
           </section>
