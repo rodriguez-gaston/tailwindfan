@@ -9,7 +9,7 @@ import Link from 'next/link';
 const CategoryPage: NextPage = ({ category }: any) => {
   const propCategory = JSON.parse(category);
   const data = blocksList;
-  const categoryData = data.find((x) => x.category === propCategory.category);
+  const categoryData = data.find((x) => x.name === propCategory.name);
 
   const ref = createRef<HTMLElement>();
   const [viewSize, setViewSize] = useState<string>('w-full');
@@ -56,7 +56,7 @@ const CategoryPage: NextPage = ({ category }: any) => {
                 isScrolling ? 'text-3xl' : 'text-5xl'
               }`}
             >
-              {categoryData?.title}
+              {categoryData?.name}
             </h1>
           </section>
           <section className="lg:flex gap-2 hidden">
@@ -64,13 +64,15 @@ const CategoryPage: NextPage = ({ category }: any) => {
           </section>
         </section>
         <section className="space-y-8">
-          {categoryData && (
-            <Block
-              key={categoryData.id + categoryData.category}
-              block={categoryData}
-              viewSize={viewSize}
-            />
-          )}
+          {categoryData?.blocks.map((block) => {
+            return (
+              <Block
+                key={block.id + categoryData.name}
+                block={block}
+                viewSize={viewSize}
+              />
+            );
+          })}
         </section>
       </section>
     </section>
@@ -82,7 +84,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const data = blocksList;
 
   const categoryData = JSON.stringify(
-    data.find((x) => x.category === categorySelected),
+    data.find((x) => x.name === categorySelected),
   );
 
   return {
@@ -96,7 +98,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: data.map((category) => {
       return {
-        params: { category: category.category },
+        params: { category: category.name },
       };
     }),
     fallback: false,
