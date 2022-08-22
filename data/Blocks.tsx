@@ -1,24 +1,40 @@
 import Example from '@/components/blocks/Example';
 import AnnouncementOne from '@/blocks/announcement/AnnouncementOne';
 import AvatarOne from '@/blocks/avatar/AvatarOne';
+import { ICategory } from '@/interface/blocks';
 
-export const blocksList = [
+export const blocksList: ICategory[] = [
   {
-    id: 'example',
-    category: 'example',
-    title: 'Simple Alert',
-    block: <Example />,
+    name: 'Example',
+    url: 'example',
+    blocks: [
+      {
+        id: 'example',
+        title: 'Simple Alert',
+        block: <Example />,
+      },
+    ],
   },
   {
-    id: '1',
-    category: 'announcement',
-    title: 'Simple Announcement',
-    block: <AnnouncementOne />,
+    name: 'Announcement',
+    url: 'announcement',
+    blocks: [
+      {
+        id: '1',
+        title: 'Simple Announcement',
+        block: <AnnouncementOne />,
+      },
+    ],
   },
   {
-    id: '1',
-    category: 'avatar',
-    title: 'Simple Avatar',
-    block: <AvatarOne />,
+    name: 'Avatar',
+    url: 'avatar',
+    blocks: [
+      {
+        id: '1',
+        title: 'Simple Avatar',
+        block: <AvatarOne />,
+      },
+    ],
   },
 ];
