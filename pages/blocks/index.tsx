@@ -7,12 +7,12 @@ const BlocksPage: NextPage = () => {
 
   return (
     <section className="py-10 px-8">
-      <section className="max-w-7xl mx-auto space-y-4">
+      <section className="max-w-7xl items-center justify-between mx-auto grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {data.map((category) => {
           return (
-            <Link href={`/blocks/${category.category}`} key={category.category}>
-              <a className="p-4 border border-gray-800 rounded-lg block w-40">
-                {category.category}
+            <Link href={`/blocks/${category.name}`} key={category.name}>
+              <a className="p-4 rounded-lg border-2 border-blue-800 hover:bg-blue-800 hover:text-white">
+                {category.name}
               </a>
             </Link>
           );
