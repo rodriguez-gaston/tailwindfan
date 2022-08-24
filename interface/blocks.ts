@@ -7,6 +7,5 @@ export interface IBlock {
 export interface ICategory {
   name: string;
   url: string;
-  image?: string;
   blocks: IBlock[];
 }
