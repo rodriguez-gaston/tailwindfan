@@ -13,7 +13,7 @@ const BlocksPage: NextPage = () => {
           const blockCount = category.blocks.length;
 
           return (
-            <Link href={`/blocks/${category.name}`} key={category.name}>
+            <Link href={`/blocks/${category.url}`} key={category.name}>
               <a className="p-4 rounded-lg border-2 border-blue-800 hover:bg-blue-800 hover:text-white flex flex-col items-center gap-2">
                 <section className="flex justify-between items-center w-full">
                   <h2 className="font-bold">{category.name}</h2>
