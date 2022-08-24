@@ -16,7 +16,7 @@ const DonationSticky = () => {
         <a
           href="https://www.buymeacoffee.com/codewithgaston"
           target="_blank"
-          className="fixed flex gap-2 items-center bottom-3 right-3 px-4 py-2 font-medium text-sm bg-blue-700 rounded-lg text-white"
+          className="fixed flex gap-2 items-center bottom-3 right-3 z-20 px-4 py-2 font-medium text-sm bg-blue-700 rounded-lg text-white"
           rel="noreferrer"
         >
           <span>
