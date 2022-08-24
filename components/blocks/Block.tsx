@@ -8,9 +8,10 @@ import { IBlock } from '@/interface/blocks';
 interface BlockProps {
   block: IBlock;
   viewSize: string;
+  category: string;
 }
 
-const Block = ({ block, viewSize = 'w-full' }: BlockProps) => {
+const Block = ({ block, viewSize = 'w-full', category }: BlockProps) => {
   const [showExample, setShowExample] = useState<boolean>(true);
   const [code, setCode] = useState<string>('');
 
@@ -20,9 +21,7 @@ const Block = ({ block, viewSize = 'w-full' }: BlockProps) => {
 
   useEffect(() => {
     async function fetchBlock() {
-      const response = await fetch(
-        `/library/${block.category}/${block.id}.html`,
-      );
+      const response = await fetch(`/library/${category}/${block.id}.html`);
       const htmlText = await response.text();
 
       setCode(htmlText);
