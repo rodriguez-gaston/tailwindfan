@@ -21,7 +21,12 @@ const BlocksPage: NextPage = () => {
                     {`${blockCount} ${blockCount == 1 ? 'Block' : 'Blocks'}`}{' '}
                   </p>
                 </section>
-                {category.image && <Image src={`/images/${category.image}`} width={180} height={150} />}
+                <Image
+                  src={`/images/${category.url}.png`}
+                  width={180}
+                  height={150}
+                  alt={`${category.name} category`}
+                />
               </a>
             </Link>
           );
