@@ -18,7 +18,6 @@ export const blocksList: ICategory[] = [
   {
     name: 'Announcement',
     url: 'announcement',
-    image: 'announcement.png',
     blocks: [
       {
         id: '1',
@@ -30,7 +29,6 @@ export const blocksList: ICategory[] = [
   {
     name: 'Avatar',
     url: 'avatar',
-    image: 'avatar.png',
     blocks: [
       {
         id: '1',
@@ -42,13 +40,11 @@ export const blocksList: ICategory[] = [
   {
     name: 'Badge',
     url: 'badge',
-    image: 'badge.png',
     blocks: [],
   },
   {
     name: 'Blog',
     url: 'blog',
-    image: 'blog.png',
     blocks: [],
   },
   {
@@ -112,11 +108,6 @@ export const blocksList: ICategory[] = [
     blocks: [],
   },
   {
-    name: 'Form',
-    url: 'form',
-    blocks: [],
-  },
-  {
     name: 'Gallery',
     url: 'gallery',
     blocks: [],
@@ -124,7 +115,6 @@ export const blocksList: ICategory[] = [
   {
     name: 'Header',
     url: 'header',
-    image: 'header.png',
     blocks: [],
   },
   {
