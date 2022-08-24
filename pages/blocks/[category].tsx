@@ -9,7 +9,7 @@ import Link from 'next/link';
 const CategoryPage: NextPage = ({ category }: any) => {
   const propCategory = JSON.parse(category);
   const data = blocksList;
-  const categoryData = data.find((x) => x.name === propCategory.name);
+  const categoryData = data.find((x) => x.url === propCategory.url);
 
   const ref = createRef<HTMLElement>();
   const [viewSize, setViewSize] = useState<string>('w-full');
@@ -70,6 +70,7 @@ const CategoryPage: NextPage = ({ category }: any) => {
                 key={block.id + categoryData.name}
                 block={block}
                 viewSize={viewSize}
+                category={categoryData.url}
               />
             );
           })}
@@ -84,7 +85,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const data = blocksList;
 
   const categoryData = JSON.stringify(
-    data.find((x) => x.name === categorySelected),
+    data.find((x) => x.url === categorySelected),
   );
 
   return {
@@ -98,7 +99,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: data.map((category) => {
       return {
-        params: { category: category.name },
+        params: { category: category.url },
       };
     }),
     fallback: false,
