@@ -3,6 +3,7 @@ import Copy from '@/components/icons/Copy';
 import Code from '@/components/icons/CodeSmall';
 import Heart from '@/components/icons/Heart';
 import prism from 'prismjs';
+import convertHtml from '@/utils/convertHtml';
 import { IBlock } from '@/interface/blocks';
 
 interface BlockProps {
@@ -14,6 +15,7 @@ interface BlockProps {
 const Block = ({ block, viewSize = 'w-full', category }: BlockProps) => {
   const [showExample, setShowExample] = useState<boolean>(true);
   const [code, setCode] = useState<string>('');
+  const [html, setHtml] = useState<string>('');
 
   useEffect(() => {
     prism.highlightAll();
@@ -24,6 +26,7 @@ const Block = ({ block, viewSize = 'w-full', category }: BlockProps) => {
       const response = await fetch(`/library/${category}/${block.id}.html`);
       const htmlText = await response.text();
 
+      setHtml(convertHtml(htmlText));
       setCode(htmlText);
 
       return;
@@ -67,7 +70,13 @@ const Block = ({ block, viewSize = 'w-full', category }: BlockProps) => {
         style={{ maxWidth: viewSize }}
       >
         {showExample ? (
-          <>{block.block}</>
+          <iframe
+            className="w-full h-full"
+            loading="lazy"
+            srcDoc={html}
+            style={{ maxWidth: viewSize }}
+            title={`${block.title}`}
+          ></iframe>
         ) : (
           <pre className="w-full h-full bg-gray-800">
             <code className="language-html">{code}</code>
