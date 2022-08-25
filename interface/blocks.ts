@@ -1,7 +1,7 @@
 export interface IBlock {
   id: string;
   title: string;
-  block: React.ReactElement;
+  block?: React.ReactElement;
 }
 
 export interface ICategory {
