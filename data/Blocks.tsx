@@ -2,7 +2,6 @@ import { ICategory } from '@/interface/blocks';
 import Example from '@/components/blocks/Example';
 import AnnouncementOne from '@/components/blocks/announcement/AnnouncementOne';
 import AvatarOne from '@/components/blocks/avatar/AvatarOne';
-import BreadcrumbOne from '@/components/blocks/breadcrumb/BreadcrumbOne';
 
 export const blocksList: ICategory[] = [
   {
@@ -55,7 +54,6 @@ export const blocksList: ICategory[] = [
       {
         id: '1',
         title: 'Flags',
-        block: <BreadcrumbOne />,
       },
     ],
   },
