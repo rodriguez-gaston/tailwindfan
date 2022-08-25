@@ -1,20 +1,6 @@
 import { ICategory } from '@/interface/blocks';
-import Example from '@/components/blocks/Example';
-import AnnouncementOne from '@/components/blocks/announcement/AnnouncementOne';
-import AvatarOne from '@/components/blocks/avatar/AvatarOne';
 
 export const blocksList: ICategory[] = [
-  {
-    name: 'Example',
-    url: 'example',
-    blocks: [
-      {
-        id: 'example',
-        title: 'Simple Alert',
-        block: <Example />,
-      },
-    ],
-  },
   {
     name: 'Announcement',
     url: 'announcement',
@@ -22,7 +8,6 @@ export const blocksList: ICategory[] = [
       {
         id: '1',
         title: 'Simple Announcement',
-        block: <AnnouncementOne />,
       },
     ],
   },
@@ -33,7 +18,6 @@ export const blocksList: ICategory[] = [
       {
         id: '1',
         title: 'Simple Avatar',
-        block: <AvatarOne />,
       },
     ],
   },
