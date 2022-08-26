@@ -68,7 +68,10 @@ const CategoryPage: NextPage = ({ category }: any) => {
             return (
               <Block
                 key={block.id + categoryData.name}
-                block={block}
+                id={block.id}
+                title={block.title}
+                container={block.container}
+                isShortView={block.isShortView}
                 viewSize={viewSize}
                 category={categoryData.url}
               />
