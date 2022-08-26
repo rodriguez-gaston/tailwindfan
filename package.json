@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "tailbuild": "npx tailwindcss -i styles/globals.css -o public/build.css -m"
   },
   "dependencies": {
     "@types/prismjs": "^1.26.0",
