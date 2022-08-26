@@ -4,15 +4,24 @@ import Code from '@/components/icons/CodeSmall';
 import Heart from '@/components/icons/Heart';
 import prism from 'prismjs';
 import convertHtml from '@/utils/convertHtml';
-import { IBlock } from '@/interface/blocks';
 
 interface BlockProps {
-  block: IBlock;
+  id: string;
+  title: string;
+  container?: string;
+  isShortView?: boolean;
   viewSize: string;
   category: string;
 }
 
-const Block = ({ block, viewSize = 'w-full', category }: BlockProps) => {
+const Block = ({
+  id,
+  title,
+  container = 'p-4',
+  isShortView = false,
+  viewSize = 'w-full',
+  category,
+}: BlockProps) => {
   const [showExample, setShowExample] = useState<boolean>(true);
   const [code, setCode] = useState<string>('');
   const [html, setHtml] = useState<string>('');
@@ -23,10 +32,10 @@ const Block = ({ block, viewSize = 'w-full', category }: BlockProps) => {
 
   useEffect(() => {
     async function fetchBlock() {
-      const response = await fetch(`/library/${category}/${block.id}.html`);
+      const response = await fetch(`/library/${category}/${id}.html`);
       const htmlText = await response.text();
 
-      setHtml(convertHtml(htmlText));
+      setHtml(convertHtml(htmlText, container));
       setCode(htmlText);
 
       return;
@@ -38,7 +47,7 @@ const Block = ({ block, viewSize = 'w-full', category }: BlockProps) => {
   return (
     <section className="space-y-4">
       <section className="space-y-2">
-        <h2 className="text-xl font-bold">{block.title}</h2>
+        <h2 className="text-xl font-bold">{title}</h2>
         <section
           className="flex items-center justify-between gap-4"
           style={{ maxWidth: viewSize }}
@@ -66,7 +75,9 @@ const Block = ({ block, viewSize = 'w-full', category }: BlockProps) => {
         </section>
       </section>
       <section
-        className="border-2 border-gray-800 rounded-lg h-[400px] lg:h-[600px] w-full overflow-y-scroll"
+        className={`border-2 border-gray-800 rounded-lg ${
+          !isShortView ? 'h-[400px] lg:h-[600px]' : 'h-[200px] lg:h-[300px]'
+        } w-full overflow-y-scroll`}
         style={{ maxWidth: viewSize }}
       >
         {showExample ? (
@@ -75,7 +86,7 @@ const Block = ({ block, viewSize = 'w-full', category }: BlockProps) => {
             loading="lazy"
             srcDoc={html}
             style={{ maxWidth: viewSize }}
-            title={`${block.title}`}
+            title={`${title}`}
           ></iframe>
         ) : (
           <pre className="w-full h-full bg-gray-800">
