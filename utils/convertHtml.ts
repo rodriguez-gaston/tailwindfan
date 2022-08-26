@@ -1,4 +1,4 @@
-const convertHtml = (html: string) => {
+const convertHtml = (html: string, container: string) => {
   return `
     <link rel="stylesheet" href="${origin}/build.css">
 
@@ -12,7 +12,7 @@ const convertHtml = (html: string) => {
       })
     </script>
 
-    <body>
+    <body class="${container}">
       ${html}
     </body>
   `;
