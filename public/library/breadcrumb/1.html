@@ -1,12 +1,8 @@
-<style>
-  .clip {clip-path: polygon(85% 0%, 100% 50%, 85% 100%, 0% 100%, 15% 50%, 0% 0%);
-  }
-  .first-clip {
-    clip-path: polygon(85% 0, 100% 50%, 85% 100%, 0% 100%, 0 50%, 0% 0%);
-  }
-</style>
-<nav class="flex">
-  <a href="/" class="first-clip w-28 sm:w-32 pr-4 pl-2 sm:pr-8 sm:pl-6 py-2 bg-gray-200 flex items-center justify-center text-gray-700 text-xs hover:bg-indigo-600 hover:text-white">Home</a>
-  <a href="/" class="clip w-28 sm:w-32 -ml-2 px-4 sm:px-8 py-2 bg-gray-200 flex items-center justify-center text-gray-700 text-xs hover:bg-indigo-600 hover:text-white">Blocks</a>
-  <a href="/" class="clip w-28 sm:w-32 -ml-2 px-4 sm:px-8 py-2 bg-indigo-500 flex items-center justify-center text-white text-xs">Menu</a>
-</nav>
+<section class="flex divide-x divide-gray-400 gap-4 text-gray-700 text-sm">
+  <a href="/" class="hover:text-blue-700">Back to Home</a>
+  <nav class="pl-4 flex gap-4 items-center">
+    <a href="/" class="text-blue-500 hover:text-blue-700">Blocks</a>
+    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="8"><path fill="none" stroke="currentColor" d="M1 0l4 4-4 4"></path></svg>
+    <a href="/" class="text-blue-500 hover:text-blue-700">Breadcrumb</a>
+  </nav>
+</section>
