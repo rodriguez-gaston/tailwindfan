@@ -39,6 +39,10 @@ export const blocksList: ICategory[] = [
         id: '1',
         title: 'Flags',
       },
+      {
+        id: '2',
+        title: 'With divider',
+      },
     ],
   },
   {
