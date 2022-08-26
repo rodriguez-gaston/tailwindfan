@@ -7,7 +7,15 @@ export const blocksList: ICategory[] = [
     blocks: [
       {
         id: '1',
-        title: 'Simple Announcement',
+        title: 'Simple text',
+        container: '',
+        isShortView: true,
+      },
+      {
+        id: '2',
+        title: 'With image',
+        container: '',
+        isShortView: true,
       },
     ],
   },
@@ -37,12 +45,22 @@ export const blocksList: ICategory[] = [
     blocks: [
       {
         id: '1',
-        title: 'Flags',
+        title: 'With divider',
         isShortView: true,
       },
       {
         id: '2',
-        title: 'With divider',
+        title: 'With elipsis',
+        isShortView: true,
+      },
+      {
+        id: '3',
+        title: 'Elipsis with border',
+        isShortView: true,
+      },
+      {
+        id: '4',
+        title: 'Flags',
         isShortView: true,
       },
     ],
