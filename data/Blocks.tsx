@@ -38,10 +38,12 @@ export const blocksList: ICategory[] = [
       {
         id: '1',
         title: 'Flags',
+        isShortView: true,
       },
       {
         id: '2',
         title: 'With divider',
+        isShortView: true,
       },
     ],
   },
