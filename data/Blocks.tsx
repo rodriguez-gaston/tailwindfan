@@ -13,7 +13,19 @@ export const blocksList: ICategory[] = [
       },
       {
         id: '2',
-        title: 'With image',
+        title: 'With background image',
+        container: '',
+        isShortView: true,
+      },
+      {
+        id: '3',
+        title: 'Fixed to top',
+        container: '',
+        isShortView: true,
+      },
+      {
+        id: '4',
+        title: 'Fixed with close button',
         container: '',
         isShortView: true,
       },
