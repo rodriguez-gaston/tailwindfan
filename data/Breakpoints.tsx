@@ -13,7 +13,7 @@ export const allBreakpoints: Array<IBreakpoint> = [
   },
   {
     name: 'Small',
-    maxWidth: '640px',
+    maxWidth: '646px',
     icon: <DeviceMobileRotated />,
   },
   {
