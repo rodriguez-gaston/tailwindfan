@@ -37,14 +37,83 @@ export const blocksList: ICategory[] = [
     blocks: [
       {
         id: '1',
-        title: 'Simple Avatar',
+        title: 'Simple avatar',
+        container: 'flex justify-center p-4',
+        isShortView: true,
+      },
+      {
+        id: '2',
+        title: 'With status',
+        container: 'flex justify-center p-8',
+        isShortView: true,
+      },
+      {
+        id: '3',
+        title: 'Avatar group',
+        container: 'flex justify-center p-8',
+        isShortView: true,
+      },
+      {
+        id: '4',
+        title: 'Gradient ring',
+        container: 'flex justify-center p-8',
+        isShortView: true,
+      },
+      {
+        id: '5',
+        title: 'Ring group',
+        container: 'flex justify-center p-8',
+        isShortView: true,
       },
     ],
   },
   {
     name: 'Badge',
     url: 'badge',
-    blocks: [],
+    blocks: [
+      {
+        id: '1',
+        title: 'Simple badge',
+        container: 'flex flex-col items-center p-8 gap-2',
+        isShortView: true,
+      },
+      {
+        id: '2',
+        title: 'Simple badge with action',
+        container: 'flex flex-col items-center p-8 gap-2',
+        isShortView: true,
+      },
+      {
+        id: '3',
+        title: 'Action on hover',
+        container: 'flex flex-col items-center p-8 gap-2',
+        isShortView: true,
+      },
+      {
+        id: '4',
+        title: 'Rounded dark tag',
+        container: 'flex flex-col items-center p-8 gap-2',
+        isShortView: true,
+      },
+      {
+        id: '5',
+        title: 'Tags with colors',
+        container: 'flex flex-col items-center p-8 gap-2',
+        isShortView: true,
+      },
+      {
+        id: '6',
+        title: 'Tags with icon',
+        container: 'flex flex-col items-center p-8 gap-2',
+        isShortView: true,
+      },
+      {
+        id: '7',
+        title: 'Overlapped tag',
+        container: 'flex flex-col items-center p-8 gap-2',
+        isShortView: true,
+      },
+    ],
   },
   {
     name: 'Blog',
