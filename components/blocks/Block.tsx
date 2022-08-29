@@ -4,6 +4,7 @@ import Code from '@/components/icons/CodeSmall';
 import Heart from '@/components/icons/Heart';
 import prism from 'prismjs';
 import convertHtml from '@/utils/convertHtml';
+import Eye from '@/components/icons/Eye';
 
 interface BlockProps {
   id: string;
@@ -47,52 +48,61 @@ const Block = ({
   return (
     <section className="space-y-4">
       <section className="space-y-2">
-        <h2 className="text-xl font-bold">{title}</h2>
-        <section
-          className="flex items-center justify-between gap-4"
-          style={{ maxWidth: viewSize }}
-        >
-          <section className="flex items-center gap-4">
-            <section className="flex gap-2">
+        <h2 className="text-xl font-medium text-gray-800">{title}</h2>
+      </section>
+      <section
+        className="border border-gray-300 rounded-t-lg bg-gray-100 w-full"
+        style={{ maxWidth: viewSize }}
+      >
+        <section className="bg-white border-b border-gray-300 p-2 flex items-center justify-between gap-4 rounded-t-lg text-gray-600">
+          <section className="flex items-center gap-2">
+            <section>
               <button
-                onClick={() => setShowExample(!showExample)}
-                className={`text-sm p-2 rounded-lg border-2 border-blue-800 hover:bg-blue-800 hover:text-white ${
-                  !showExample && 'bg-blue-800 text-white'
+                onClick={() => setShowExample(true)}
+                className={`text-sm p-2 rounded-tl-lg rounded-bl-lg border border-gray-300 ${
+                  showExample && 'bg-gray-100'
+                }`}
+              >
+                <Eye />
+              </button>
+              <button
+                onClick={() => setShowExample(false)}
+                className={`text-sm p-2 rounded-tr-lg rounded-br-lg border-t border-r border-b border-gray-300 ${
+                  !showExample && 'bg-gray-100'
                 }`}
               >
                 <Code />
               </button>
-              <button className="text-sm p-2 rounded-lg border-2 border-blue-800 hover:bg-blue-800 hover:text-white">
-                <Copy />
-              </button>
             </section>
+            <button className="text-sm p-2 rounded-lg border border-gray-300 hover:bg-gray-100 ">
+              <Copy />
+            </button>
           </section>
           <section>
-            <button className="text-sm p-2 rounded-lg border-2 border-blue-800 hover:bg-blue-800 hover:text-white">
+            <button className="text-sm p-2 rounded-lg border border-gray-300 hover:bg-gray-100">
               <Heart />
             </button>
           </section>
         </section>
-      </section>
-      <section
-        className={`border-2 border-gray-800 rounded-lg ${
-          !isShortView ? 'h-[400px] lg:h-[600px]' : 'h-[200px] lg:h-[300px]'
-        } w-full overflow-y-scroll`}
-        style={{ maxWidth: viewSize }}
-      >
-        {showExample ? (
-          <iframe
-            className="w-full h-full"
-            loading="lazy"
-            srcDoc={html}
-            style={{ maxWidth: viewSize }}
-            title={`${title}`}
-          ></iframe>
-        ) : (
-          <pre className="w-full h-full bg-gray-800">
-            <code className="language-html">{code}</code>
-          </pre>
-        )}
+        <section
+          className={`overflow-y-scroll ${
+            !isShortView ? 'h-[400px] lg:h-[600px]' : 'h-[200px] lg:h-[300px]'
+          }`}
+        >
+          {showExample ? (
+            <iframe
+              className="w-full h-full"
+              loading="lazy"
+              srcDoc={html}
+              style={{ maxWidth: viewSize }}
+              title={`${title}`}
+            ></iframe>
+          ) : (
+            <pre className="w-full h-full bg-gray-800">
+              <code className="language-html">{code}</code>
+            </pre>
+          )}
+        </section>
       </section>
     </section>
   );
