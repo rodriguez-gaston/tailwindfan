@@ -51,10 +51,10 @@ const Block = ({
         <h2 className="text-xl font-medium text-gray-800">{title}</h2>
       </section>
       <section
-        className="border border-gray-300 rounded-t-lg bg-gray-100 w-full"
+        className="border border-gray-300 rounded-t-lg w-full"
         style={{ maxWidth: viewSize }}
       >
-        <section className="bg-white border-b border-gray-300 p-2 flex items-center justify-between gap-4 rounded-t-lg text-gray-600">
+        <section className="border-b border-gray-300 p-2 flex items-center justify-between gap-4 rounded-t-lg text-gray-600">
           <section className="flex items-center gap-2">
             <section>
               <button
