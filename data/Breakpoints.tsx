@@ -18,12 +18,12 @@ export const allBreakpoints: Array<IBreakpoint> = [
   },
   {
     name: 'Medium',
-    maxWidth: '768px',
+    maxWidth: '770px',
     icon: <DeviceTablet />,
   },
   {
     name: 'Large',
-    maxWidth: '1024px',
+    maxWidth: '1026px',
     icon: <DeviceTabletRotated />,
   },
   {
