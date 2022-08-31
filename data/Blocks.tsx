@@ -118,7 +118,24 @@ export const blocksList: ICategory[] = [
   {
     name: 'Blog',
     url: 'blog',
-    blocks: [],
+    blocks: [
+      {
+        id: '1',
+        title: 'Simple clickable cards',
+      },
+      {
+        id: '2',
+        title: 'Large desktop card',
+      },
+      {
+        id: '3',
+        title: 'With hover effect',
+      },
+      {
+        id: '4',
+        title: 'With multi-line truncation',
+      },
+    ],
   },
   {
     name: 'Breadcrumb',
