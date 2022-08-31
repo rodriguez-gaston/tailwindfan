@@ -125,7 +125,7 @@ export const blocksList: ICategory[] = [
       },
       {
         id: '2',
-        title: 'Large desktop card',
+        title: 'Only title',
       },
       {
         id: '3',
@@ -134,6 +134,10 @@ export const blocksList: ICategory[] = [
       {
         id: '4',
         title: 'With multi-line truncation',
+      },
+      {
+        id: '5',
+        title: 'Large desktop card',
       },
     ],
   },
