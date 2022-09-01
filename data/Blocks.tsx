@@ -139,6 +139,10 @@ export const blocksList: ICategory[] = [
         id: '5',
         title: 'Large desktop card',
       },
+      {
+        id: '6',
+        title: 'Rounded with different sizes',
+      },
     ],
   },
   {
