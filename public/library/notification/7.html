@@ -1,46 +1,27 @@
-<!--
-  To use this block, extend your theme in the tailwind.config file with the transitionProperty:
-
-  module.exports = {
-    ...
-    theme: {
-      ...
-      extend: {
-        ...
-        transitionProperty: {
-          'width': 'width',
-          'color': 'color'
-        },
-      },
-    },
-    plugins: [ ... ],
-  }
--->
-
 <!-- Primary -->
 <div class="relative w-72 bg-sky-200 rounded p-3 flex justify-between items-center gap-2 group overflow-hidden">
-  <div class="absolute h-full bg-sky-700 w-1 inset-0 group-hover:w-full transition-width duration-300 ease-in-out"></div>
-  <h6 class="z-10 text-xs text-gray-800 group-hover:text-white transition-color duration-300 ease-in-out">Hi! I'm a primary message</h6>
-  <button class="z-10 text-sky-700 hover:underline text-xs font-bold group-hover:text-white transition-color duration-300 ease-in-out">Action</button>
+  <div class="absolute h-full bg-sky-700 w-1 inset-0 group-hover:w-full transition-all duration-300 ease-in-out"></div>
+  <h6 class="z-10 text-xs text-gray-800 group-hover:text-white transition-colors duration-300 ease-in-out">Hi! I'm a primary message</h6>
+  <button class="z-10 text-sky-700 hover:underline text-xs font-bold group-hover:text-white transition-colors duration-300 ease-in-out">Action</button>
 </div>
 
 <!-- Success -->
 <div class="relative w-72 bg-green-200 rounded p-3 flex justify-between items-center gap-2 group overflow-hidden">
-  <div class="absolute h-full bg-green-700 w-1 inset-0 group-hover:w-full transition-width duration-300 ease-in-out"></div>
-  <h6 class="z-10 text-xs text-gray-800 group-hover:text-white transition-color duration-300 ease-in-out">Hi! I'm a success message</h6>
-  <button class="z-10 text-green-700 hover:underline text-xs font-bold group-hover:text-white transition-color duration-300 ease-in-out">Action</button>
+  <div class="absolute h-full bg-green-700 w-1 inset-0 group-hover:w-full transition-all duration-300 ease-in-out"></div>
+  <h6 class="z-10 text-xs text-gray-800 group-hover:text-white transition-colors duration-300 ease-in-out">Hi! I'm a success message</h6>
+  <button class="z-10 text-green-700 hover:underline text-xs font-bold group-hover:text-white transition-colors duration-300 ease-in-out">Action</button>
 </div>
 
 <!-- Warning -->
 <div class="relative w-72 bg-yellow-200 rounded p-3 flex justify-between items-center gap-2 group overflow-hidden">
-  <div class="absolute h-full bg-yellow-600 w-1 inset-0 group-hover:w-full transition-width duration-300 ease-in-out"></div>
-  <h6 class="z-10 text-xs text-gray-800 group-hover:text-white transition-color duration-300 ease-in-out">Hi! I'm a warning message</h6>
-  <button class="z-10 text-yellow-700 hover:underline text-xs font-bold group-hover:text-white transition-color duration-300 ease-in-out">Action</button>
+  <div class="absolute h-full bg-yellow-600 w-1 inset-0 group-hover:w-full transition-all duration-300 ease-in-out"></div>
+  <h6 class="z-10 text-xs text-gray-800 group-hover:text-white transition-colors duration-300 ease-in-out">Hi! I'm a warning message</h6>
+  <button class="z-10 text-yellow-700 hover:underline text-xs font-bold group-hover:text-white transition-colors duration-300 ease-in-out">Action</button>
 </div>
 
 <!-- Danger -->
 <div class="relative w-72 bg-red-200 rounded p-3 flex justify-between items-center gap-2 group overflow-hidden">
-  <div class="absolute h-full bg-red-700 w-1 inset-0 group-hover:w-full transition-width duration-300 ease-in-out"></div>
-  <h6 class="z-10 text-xs text-gray-800 group-hover:text-white transition-color duration-300 ease-in-out">Hi! I'm a danger message</h6>
-  <button class="z-10 text-red-700 hover:underline text-xs font-bold group-hover:text-white transition-color duration-300 ease-in-out">Action</button>
+  <div class="absolute h-full bg-red-700 w-1 inset-0 group-hover:w-full transition-all duration-300 ease-in-out"></div>
+  <h6 class="z-10 text-xs text-gray-800 group-hover:text-white transition-colors duration-300 ease-in-out">Hi! I'm a danger message</h6>
+  <button class="z-10 text-red-700 hover:underline text-xs font-bold group-hover:text-white transition-colors duration-300 ease-in-out">Action</button>
 </div>
