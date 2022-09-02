@@ -254,7 +254,48 @@ export const blocksList: ICategory[] = [
   {
     name: 'Notification',
     url: 'notification',
-    blocks: [],
+    blocks: [
+      {
+        id: '1',
+        title: 'Simple notification',
+        container: 'flex flex-col items-center p-8 gap-2',
+        isShortView: true,
+      },
+      {
+        id: '2',
+        title: 'With action',
+        container: 'flex flex-col items-center p-8 gap-2',
+        isShortView: true,
+      },
+      {
+        id: '3',
+        title: 'With border',
+        container: 'flex flex-col items-center p-8 gap-2',
+        isShortView: true,
+      },
+      {
+        id: '4',
+        title: 'Full notification with icon and actions',
+        container: 'flex flex-col items-center p-8 gap-2',
+      },
+      {
+        id: '5',
+        title: 'With colored shadows',
+        container: 'flex flex-col items-center p-8 gap-4',
+      },
+      {
+        id: '6',
+        title: 'Floating status',
+        container: 'flex flex-col items-center p-8 gap-8',
+        isShortView: true,
+      },
+      {
+        id: '7',
+        title: 'With background animation',
+        container: 'flex flex-col items-center p-8 gap-2',
+        isShortView: true,
+      },
+    ],
   },
   {
     name: 'Popup',
