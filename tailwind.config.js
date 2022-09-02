@@ -6,7 +6,12 @@ module.exports = {
     './public/**/**/*.html',
   ],
   theme: {
-    extend: {},
+    extend: {
+      transitionProperty: {
+        width: 'width',
+        color: 'color',
+      },
+    },
   },
   plugins: [require('@tailwindcss/line-clamp')],
 };
