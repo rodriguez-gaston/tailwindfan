@@ -174,7 +174,68 @@ export const blocksList: ICategory[] = [
   {
     name: 'Button',
     url: 'button',
-    blocks: [],
+    blocks: [
+      {
+        id: '1',
+        title: 'Simple button',
+        container: 'flex flex-col items-center p-8 gap-2',
+        isShortView: true,
+      },
+      {
+        id: '2',
+        title: 'Gradient text and background',
+        container: 'flex flex-col items-center p-8 gap-2',
+        isShortView: true,
+      },
+      {
+        id: '3',
+        title: 'Expanded on hover',
+        container: 'flex flex-col items-center p-8 gap-2',
+        isShortView: true,
+      },
+      {
+        id: '4',
+        title: 'Press down',
+        container: 'flex flex-col items-center p-8 gap-2',
+        isShortView: true,
+      },
+      {
+        id: '5',
+        title: 'Goes up on hover',
+        container: 'flex flex-col items-center p-8 gap-2',
+        isShortView: true,
+      },
+      {
+        id: '6',
+        title: 'Expand on hover',
+        container: 'flex flex-col items-center p-8 gap-2',
+        isShortView: true,
+      },
+      {
+        id: '7',
+        title: 'With left accent',
+        container: 'flex flex-col items-center p-8 gap-2',
+        isShortView: true,
+      },
+      {
+        id: '8',
+        title: 'Cover with icon',
+        container: 'flex flex-col items-center p-8 gap-2',
+        isShortView: true,
+      },
+      {
+        id: '9',
+        title: 'Floating button',
+        container: 'flex flex-col items-center p-8 gap-2',
+        isShortView: true,
+      },
+      {
+        id: '10',
+        title: 'Share with hover options',
+        container: 'flex flex-col items-center p-8 gap-2',
+        isShortView: true,
+      },
+    ],
   },
   {
     name: 'Buttons Group',
