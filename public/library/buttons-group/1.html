@@ -1,12 +1,15 @@
-<section class="relative group flex">
-  <button class="relative z-10 bg-blue-600 rounded-full p-3 text-white group-hover:rotate-45 transition-all duration-300 ease-in-out">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-      <line x1="12" y1="5" x2="12" y2="19" />
-      <line x1="5" y1="12" x2="19" y2="12" />
-    </svg>
-  </button>
-  <button class="absolute bg-gray-200 text-blue-500 rounded-full p-3 group-hover:translate-x-12 transition-all duration-300 ease-in-out">
+<section class="relative flex">
+  <input type="checkbox" name="expand" id="expand" class="peer" hidden>
+  <label for="expand" class="relative z-10 peer-checked:rotate-45 transition-all duration-300 ease-in-out group">
+    <div class="bg-blue-600 rounded-full p-3 text-white cursor-pointer">
+      <svg xmlns="http://www.w3.org/2000/svg" class="peer-checked:rotate-45 transition-all duration-300 ease-in-out" width="20" height="20" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <line x1="12" y1="5" x2="12" y2="19" />
+        <line x1="5" y1="12" x2="19" y2="12" />
+      </svg>
+    </div>
+  </label>
+  <button class="absolute bg-gray-200 text-blue-500 rounded-full p-3 peer-checked:translate-x-12 transition-all duration-300 ease-in-out hover:scale-110">
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
       <path d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
@@ -14,7 +17,7 @@
       <line x1="16" y1="5" x2="19" y2="8" />
     </svg>
   </button>
-  <button class="absolute bg-gray-200 text-cyan-500 rounded-full p-3 group-hover:translate-x-24 transition-all duration-300 ease-in-out">
+  <button class="absolute bg-gray-200 text-cyan-500 rounded-full p-3 peer-checked:translate-x-24 transition-all duration-300 ease-in-out hover:scale-110">
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
       <circle cx="6" cy="12" r="3" />
@@ -24,7 +27,7 @@
       <line x1="8.7" y1="13.3" x2="15.3" y2="16.7" />
     </svg>
   </button>
-  <button class="absolute bg-gray-200 text-emerald-500 rounded-full p-3 group-hover:translate-x-36 transition-all duration-300 ease-in-out">
+  <button class="absolute bg-gray-200 text-emerald-500 rounded-full p-3 peer-checked:translate-x-36 transition-all duration-300 ease-in-out hover:scale-110">
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
       <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
@@ -32,7 +35,7 @@
       <line x1="12" y1="4" x2="12" y2="16" />
     </svg>
   </button>
-  <button class="absolute bg-gray-200 text-red-500 rounded-full p-3 group-hover:translate-x-48 transition-all duration-300 ease-in-out">
+  <button class="absolute bg-gray-200 text-red-500 rounded-full p-3 peer-checked:translate-x-48 transition-all duration-300 ease-in-out hover:scale-110">
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
       <line x1="4" y1="7" x2="20" y2="7" />
