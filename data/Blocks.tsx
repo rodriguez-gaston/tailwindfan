@@ -243,13 +243,13 @@ export const blocksList: ICategory[] = [
     blocks: [
       {
         id: '1',
-        title: 'Expand on hover',
+        title: 'Expand on click',
         container: 'flex justify-center p-8',
         isShortView: true,
       },
       {
         id: '2',
-        title: 'Expand on click',
+        title: 'Expand on hover',
         container: 'flex justify-center p-8',
         isShortView: true,
       },
