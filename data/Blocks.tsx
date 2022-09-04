@@ -240,7 +240,20 @@ export const blocksList: ICategory[] = [
   {
     name: 'Buttons Group',
     url: 'buttons-group',
-    blocks: [],
+    blocks: [
+      {
+        id: '1',
+        title: 'Expand on hover',
+        container: 'flex justify-center p-8',
+        isShortView: true,
+      },
+      {
+        id: '2',
+        title: 'Expand on click',
+        container: 'flex justify-center p-8',
+        isShortView: true,
+      },
+    ],
   },
   {
     name: 'Card',
