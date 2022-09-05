@@ -253,6 +253,30 @@ export const blocksList: ICategory[] = [
         container: 'flex justify-center p-8',
         isShortView: true,
       },
+      {
+        id: '3',
+        title: 'Action menu',
+        container: 'flex justify-center p-8',
+        isShortView: true,
+      },
+      {
+        id: '4',
+        title: 'Action menu with icons',
+        container: 'flex justify-center p-8',
+        isShortView: true,
+      },
+      {
+        id: '5',
+        title: 'Counter',
+        container: 'flex justify-center p-8',
+        isShortView: true,
+      },
+      {
+        id: '6',
+        title: 'Counter with number input',
+        container: 'flex justify-center p-8',
+        isShortView: true,
+      },
     ],
   },
   {
