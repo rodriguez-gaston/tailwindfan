@@ -244,13 +244,13 @@ export const blocksList: ICategory[] = [
       {
         id: '1',
         title: 'Expand on click',
-        container: 'flex justify-center p-8',
+        container: 'flex justify-start p-8',
         isShortView: true,
       },
       {
         id: '2',
         title: 'Expand on hover',
-        container: 'flex justify-center p-8',
+        container: 'flex justify-start p-8',
         isShortView: true,
       },
       {
@@ -267,12 +267,18 @@ export const blocksList: ICategory[] = [
       },
       {
         id: '5',
-        title: 'Counter',
+        title: 'Action menu with dropdown',
         container: 'flex justify-center p-8',
         isShortView: true,
       },
       {
         id: '6',
+        title: 'Counter',
+        container: 'flex justify-center p-8',
+        isShortView: true,
+      },
+      {
+        id: '7',
         title: 'Counter with number input',
         container: 'flex justify-center p-8',
         isShortView: true,
