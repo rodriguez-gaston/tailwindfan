@@ -56,10 +56,10 @@ const Block = ({
       >
         <section className="border-b border-gray-300 p-2 flex items-center justify-between gap-4 rounded-t-lg text-gray-600">
           <section className="flex items-center gap-2">
-            <section>
+            <section className="-space-x-px">
               <button
                 onClick={() => setShowExample(true)}
-                className={`text-sm p-2 rounded-tl-lg rounded-bl-lg border border-gray-300 ${
+                className={`text-sm p-2 rounded-l-lg border border-gray-300 ${
                   showExample && 'bg-gray-100'
                 }`}
               >
@@ -67,7 +67,7 @@ const Block = ({
               </button>
               <button
                 onClick={() => setShowExample(false)}
-                className={`text-sm p-2 rounded-tr-lg rounded-br-lg border-t border-r border-b border-gray-300 ${
+                className={`text-sm p-2 rounded-r-lg border border-gray-300 ${
                   !showExample && 'bg-gray-100'
                 }`}
               >
