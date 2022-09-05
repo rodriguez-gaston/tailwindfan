@@ -283,6 +283,12 @@ export const blocksList: ICategory[] = [
         container: 'flex justify-center p-8',
         isShortView: true,
       },
+      {
+        id: '8',
+        title: 'Previous and next arrows',
+        container: 'flex justify-center p-8',
+        isShortView: true,
+      },
     ],
   },
   {
