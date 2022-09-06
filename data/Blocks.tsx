@@ -289,6 +289,12 @@ export const blocksList: ICategory[] = [
         container: 'flex justify-center p-8',
         isShortView: true,
       },
+      {
+        id: '9',
+        title: 'Pagination with expandable ellipsis',
+        container: 'flex justify-center h-72 items-end',
+        isShortView: true,
+      },
     ],
   },
   {
