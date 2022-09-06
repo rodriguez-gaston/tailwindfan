@@ -295,6 +295,18 @@ export const blocksList: ICategory[] = [
         container: 'flex justify-center h-72 items-end',
         isShortView: true,
       },
+      {
+        id: '10',
+        title: 'Pagination with ellipsis',
+        container: 'flex justify-center p-8',
+        isShortView: true,
+      },
+      {
+        id: '11',
+        title: 'Expandable pagination on hover',
+        container: 'flex justify-center p-8',
+        isShortView: true,
+      },
     ],
   },
   {
