@@ -6,7 +6,11 @@ module.exports = {
     './public/**/**/*.html',
   ],
   theme: {
-    extend: {},
+    extend: {
+      rotate: {
+        135: '135deg',
+      },
+    },
   },
   plugins: [require('@tailwindcss/line-clamp'), require('@tailwindcss/forms')],
 };
