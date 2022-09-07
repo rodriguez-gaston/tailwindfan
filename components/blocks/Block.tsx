@@ -74,7 +74,7 @@ const Block = ({
                 <Code />
               </button>
             </section>
-            <button className="text-sm p-2 rounded-lg border border-gray-300 hover:bg-gray-100 ">
+            <button className="text-sm p-2 rounded-lg border border-gray-300 hover:bg-gray-100">
               <Copy />
             </button>
           </section>
