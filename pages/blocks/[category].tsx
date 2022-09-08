@@ -14,8 +14,8 @@ const CategoryPage: NextPage = ({ category }: any) => {
   const [viewSize, setViewSize] = useState<string>('w-full');
 
   return (
-    <section className="py-10 px-8">
-      <section className="max-w-7xl mx-auto space-y-12">
+    <section className="py-5 sm:py-10 px-2 sm:px-8">
+      <section className="max-w-7xl mx-auto space-y-6 sm:space-y-12">
         <SectionBar
           title={categoryData?.name ?? ''}
           backlinkText="Back to all blocks"
