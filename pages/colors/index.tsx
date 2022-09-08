@@ -11,8 +11,8 @@ const ColorsPage = () => {
   const colorsData = colorsList;
 
   return (
-    <section className="bg-gradient-to-b from-white to-cyan-50 py-10 px-8">
-      <section className="max-w-7xl mx-auto space-y-12">
+    <section className="bg-gradient-to-b from-white to-cyan-50 py-5 sm:py-10 px-2 sm:px-8">
+      <section className="max-w-7xl mx-auto space-y-6 sm:space-y-12">
         <SectionBar title="Colors" backlinkText="Back to Home" backlinkUrl="/">
           <section className="flex gap-1">
             <DirectionList setDirection={setGradientDirection} />
