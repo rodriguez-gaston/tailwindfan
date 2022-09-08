@@ -38,7 +38,7 @@ export const blocksList: ICategory[] = [
       {
         id: '1',
         title: 'Simple avatar',
-        container: 'flex justify-center p-4',
+        container: 'flex justify-center p-2 sm:p-4',
         isShortView: true,
       },
       {
@@ -256,7 +256,7 @@ export const blocksList: ICategory[] = [
       {
         id: '3',
         title: 'Action menu',
-        container: 'flex justify-center p-8',
+        container: 'flex justify-center px-4 py-8 sm:px-8',
         isShortView: true,
       },
       {
@@ -292,7 +292,7 @@ export const blocksList: ICategory[] = [
       {
         id: '9',
         title: 'Pagination with expandable ellipsis',
-        container: 'flex justify-center h-72 items-end',
+        container: 'flex justify-center h-48 lg:h-72 items-end',
         isShortView: true,
       },
       {
@@ -386,41 +386,40 @@ export const blocksList: ICategory[] = [
       {
         id: '1',
         title: 'Simple notification',
-        container: 'flex flex-col items-center p-8 gap-2',
+        container: 'flex flex-col items-center p-2 sm:p-8 gap-2',
         isShortView: true,
       },
       {
         id: '2',
         title: 'With action',
-        container: 'flex flex-col items-center p-8 gap-2',
+        container: 'flex flex-col items-center p-2 sm:p-8 gap-2',
         isShortView: true,
       },
       {
         id: '3',
         title: 'With border',
-        container: 'flex flex-col items-center p-8 gap-2',
+        container: 'flex flex-col items-center p-2 sm:p-8 gap-2',
         isShortView: true,
       },
       {
         id: '4',
         title: 'Full notification with icon and actions',
-        container: 'flex flex-col items-center p-8 gap-2',
+        container: 'flex flex-col items-center p-2 sm:p-8 gap-2',
       },
       {
         id: '5',
         title: 'With colored shadows',
-        container: 'flex flex-col items-center p-8 gap-4',
+        container: 'flex flex-col items-center p-2 sm:p-8 gap-4',
       },
       {
         id: '6',
         title: 'Floating status',
         container: 'flex flex-col items-center p-8 gap-8',
-        isShortView: true,
       },
       {
         id: '7',
         title: 'With background animation',
-        container: 'flex flex-col items-center p-8 gap-2',
+        container: 'flex flex-col items-center p-2 sm:p-8 gap-2',
         isShortView: true,
       },
     ],
