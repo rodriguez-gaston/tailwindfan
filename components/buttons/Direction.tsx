@@ -19,7 +19,7 @@ const Direction = ({ name, onClick, icon }: DirectionProps) => {
       />
       <label
         htmlFor={name}
-        className="flex items-center gap-2 text-sm p-2 rounded-lg border border-gray-300 hover:bg-gray-100 peer-checked:bg-gray-100 cursor-pointer transition"
+        className="flex items-center gap-1 text-sm p-0.5 rounded-lg border border-gray-300 hover:bg-gray-100 peer-checked:bg-gray-100 cursor-pointer transition"
       >
         {icon}
       </label>
