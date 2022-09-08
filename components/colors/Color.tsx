@@ -1,9 +1,13 @@
+/* eslint-disable indent */
 import React from 'react';
 import Copy from '@/components/icons/Copy';
 import Heart from '@/components/icons/Heart';
-import Arrow from '../icons/Arrow';
 
-const Color = () => {
+interface IColor {
+  direction?: string;
+}
+
+const Color = ({ direction = 'bg-gradient-to-b' }: IColor) => {
   return (
     <section className="space-y-4">
       <section className="space-y-2">
@@ -18,33 +22,9 @@ const Color = () => {
             <Heart />
           </button>
         </section>
-        <section className="h-48"></section>
-        <section className="border-t border-gray-300 p-2 flex items-center justify-start gap-1 text-gray-600">
-          <button className="text-sm p-0.5 rounded-lg border border-gray-300 hover:bg-gray-100">
-            <Arrow />
-          </button>
-          <button className="text-sm p-0.5 rounded-lg border border-gray-300 hover:bg-gray-100 ">
-            <Arrow className="rotate-45" />
-          </button>
-          <button className="text-sm p-0.5 rounded-lg border border-gray-300 hover:bg-gray-100 ">
-            <Arrow className="rotate-90" />
-          </button>
-          <button className="text-sm p-0.5 rounded-lg border border-gray-300 hover:bg-gray-100 ">
-            <Arrow className="rotate-135" />
-          </button>
-          <button className="text-sm p-0.5 rounded-lg border border-gray-300 hover:bg-gray-100 ">
-            <Arrow className="rotate-180" />
-          </button>
-          <button className="text-sm p-0.5 rounded-lg border border-gray-300 hover:bg-gray-100 ">
-            <Arrow className="-rotate-135" />
-          </button>
-          <button className="text-sm p-0.5 rounded-lg border border-gray-300 hover:bg-gray-100 ">
-            <Arrow className="-rotate-90" />
-          </button>
-          <button className="text-sm p-0.5 rounded-lg border border-gray-300 hover:bg-gray-100 ">
-            <Arrow className="-rotate-45" />
-          </button>
-        </section>
+        <section
+          className={`h-48 ${direction} from-blue-800 to-blue-300`}
+        ></section>
       </section>
     </section>
   );
