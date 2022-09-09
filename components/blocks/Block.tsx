@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import React, { useState, useEffect } from 'react';
 import Copy from '@/components/icons/Copy';
 import prism from 'prismjs';
@@ -6,6 +7,7 @@ import SwitchView from '../buttons/SwitchView';
 import FavButton from '../buttons/FavButton';
 import { BlockProps, FavBlock } from '@/interface/blocks';
 import View from '@/components/blocks/View';
+import { favBlock } from '@/utils/favBlock';
 
 const Block = ({
   id,
@@ -14,11 +16,18 @@ const Block = ({
   isShortView = false,
   viewSize = 'w-full',
   category,
+  updateFav,
+  setUpdateFav,
 }: BlockProps) => {
   const [showExample, setShowExample] = useState<boolean>(true);
   const [code, setCode] = useState<string>('');
   const [html, setHtml] = useState<string>('');
   const [isFav, setIsFav] = useState<boolean>(false);
+
+  const handlingFav = () => {
+    favBlock(isFav, category, id, setIsFav, title, container, isShortView);
+    setUpdateFav && setUpdateFav(!updateFav);
+  };
 
   useEffect(() => {
     prism.highlightAll();
@@ -66,7 +75,7 @@ const Block = ({
               <Copy />
             </button>
           </section>
-          <FavButton isFav={isFav} />
+          <FavButton isFav={isFav} onClick={handlingFav} />
         </section>
         <View
           isShortView={isShortView}
