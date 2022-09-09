@@ -3,14 +3,22 @@ import React, { useState, useEffect } from 'react';
 import Copy from '@/components/icons/Copy';
 import FavButton from '../buttons/FavButton';
 import { ColorProps, FavColor } from '@/interface/color';
+import { favColor } from '@/utils/favColor';
 
 const Color = ({
   direction = 'bg-gradient-to-b',
   colors,
   name,
   id,
+  updateFav,
+  setUpdateFav,
 }: ColorProps) => {
   const [isFav, setIsFav] = useState<boolean>(false);
+
+  const handlingFav = () => {
+    favColor(isFav, id, colors, name, setIsFav);
+    setUpdateFav && setUpdateFav(!updateFav);
+  };
 
   useEffect(() => {
     const favColors = JSON.parse(
@@ -32,7 +40,7 @@ const Color = ({
           <button className="text-sm p-2 rounded-lg border border-gray-300 hover:bg-gray-100">
             <Copy />
           </button>
-          <FavButton isFav={isFav} />
+          <FavButton isFav={isFav} onClick={handlingFav} />
         </section>
         <section className={`h-48 ${direction} ${colors}`}></section>
       </section>
