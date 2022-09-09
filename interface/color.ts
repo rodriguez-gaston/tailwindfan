@@ -9,8 +9,12 @@ export interface ColorProps {
   colors: string;
   name: string;
   id: string;
+  setUpdateFav?: (value: boolean) => void;
+  updateFav?: boolean;
 }
 
 export interface FavColor {
   id: string;
+  name: string;
+  colors: string;
 }
