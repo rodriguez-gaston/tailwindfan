@@ -1,19 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Copy from '@/components/icons/Copy';
-import Code from '@/components/icons/CodeSmall';
-import Heart from '@/components/icons/Heart';
 import prism from 'prismjs';
 import convertHtml from '@/utils/convertHtml';
-import Eye from '@/components/icons/Eye';
-
-interface BlockProps {
-  id: string;
-  title: string;
-  container?: string;
-  isShortView?: boolean;
-  viewSize: string;
-  category: string;
-}
+import SwitchView from '../buttons/SwitchView';
+import FavButton from '../buttons/FavButton';
+import { BlockProps, FavBlock } from '@/interface/blocks';
+import View from '@/components/blocks/View';
 
 const Block = ({
   id,
@@ -26,6 +18,7 @@ const Block = ({
   const [showExample, setShowExample] = useState<boolean>(true);
   const [code, setCode] = useState<string>('');
   const [html, setHtml] = useState<string>('');
+  const [isFav, setIsFav] = useState<boolean>(false);
 
   useEffect(() => {
     prism.highlightAll();
@@ -35,6 +28,15 @@ const Block = ({
     async function fetchBlock() {
       const response = await fetch(`/library/${category}/${id}.html`);
       const htmlText = await response.text();
+      const favBlocks = JSON.parse(
+        window.localStorage.getItem('blocks') || 'null',
+      );
+      if (favBlocks) {
+        const blockIsFav = favBlocks.find(
+          (block: FavBlock) => block.category == category && block.id == id,
+        );
+        setIsFav(blockIsFav);
+      }
 
       setHtml(convertHtml(htmlText, container));
       setCode(htmlText);
@@ -56,53 +58,24 @@ const Block = ({
       >
         <section className="border-b border-gray-300 p-2 flex items-center justify-between gap-4 rounded-t-lg text-gray-600">
           <section className="flex items-center gap-2">
-            <section className="-space-x-px">
-              <button
-                onClick={() => setShowExample(true)}
-                className={`text-sm p-2 rounded-l-lg border border-gray-300 ${
-                  showExample && 'bg-gray-100'
-                }`}
-              >
-                <Eye />
-              </button>
-              <button
-                onClick={() => setShowExample(false)}
-                className={`text-sm p-2 rounded-r-lg border border-gray-300 ${
-                  !showExample && 'bg-gray-100'
-                }`}
-              >
-                <Code />
-              </button>
-            </section>
+            <SwitchView
+              showExample={showExample}
+              setShowExample={setShowExample}
+            />
             <button className="text-sm p-2 rounded-lg border border-gray-300 hover:bg-gray-100">
               <Copy />
             </button>
           </section>
-          <section>
-            <button className="text-sm p-2 rounded-lg border border-gray-300 hover:bg-gray-100">
-              <Heart />
-            </button>
-          </section>
+          <FavButton isFav={isFav} />
         </section>
-        <section
-          className={`overflow-y-scroll ${
-            !isShortView ? 'h-[400px] lg:h-[600px]' : 'h-[200px] lg:h-[300px]'
-          }`}
-        >
-          {showExample ? (
-            <iframe
-              className="w-full h-full"
-              loading="lazy"
-              srcDoc={html}
-              style={{ maxWidth: viewSize }}
-              title={`${title}`}
-            ></iframe>
-          ) : (
-            <pre className="w-full h-full bg-gray-800">
-              <code className="language-html">{code}</code>
-            </pre>
-          )}
-        </section>
+        <View
+          isShortView={isShortView}
+          showExample={showExample}
+          html={html}
+          code={code}
+          title={title}
+          viewSize={viewSize}
+        />
       </section>
     </section>
   );
