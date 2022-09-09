@@ -18,9 +18,14 @@ export interface BlockProps {
   isShortView?: boolean;
   viewSize: string;
   category: string;
+  setUpdateFav?: (value: boolean) => void;
+  updateFav?: boolean;
 }
 
 export interface FavBlock {
   id: string;
+  title: string;
+  container: string;
+  isShortView: boolean;
   category: string;
 }
