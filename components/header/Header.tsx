@@ -18,8 +18,8 @@ const Header = () => {
         </Link>
         <nav className="text-gray-800 font-semibold text-sm items-center justify-end gap-4 flex">
           <Link href="/blocks">Blocks</Link>
-          <Link href="/templates">Templates</Link>
           <Link href="/colors">Colors</Link>
+          <Link href="/favorites">Favorites</Link>
           <Link href="/learn">Learn</Link>
         </nav>
       </section>
