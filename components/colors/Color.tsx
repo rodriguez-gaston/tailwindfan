@@ -1,27 +1,38 @@
 /* eslint-disable indent */
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Copy from '@/components/icons/Copy';
-import Heart from '@/components/icons/Heart';
+import FavButton from '../buttons/FavButton';
+import { ColorProps, FavColor } from '@/interface/color';
 
-interface IColor {
-  direction: string;
-  colors: string;
-}
+const Color = ({
+  direction = 'bg-gradient-to-b',
+  colors,
+  name,
+  id,
+}: ColorProps) => {
+  const [isFav, setIsFav] = useState<boolean>(false);
 
-const Color = ({ direction = 'bg-gradient-to-b', colors }: IColor) => {
+  useEffect(() => {
+    const favColors = JSON.parse(
+      window.localStorage.getItem('colors') || 'null',
+    );
+    if (favColors) {
+      const blockIsFav = favColors.find((color: FavColor) => color.id == id);
+      setIsFav(blockIsFav);
+    }
+  }, [id]);
+
   return (
     <section className="space-y-4">
       <section className="space-y-2">
-        <h2 className="text-xl font-medium text-gray-800">Gradient</h2>
+        <h2 className="text-xl font-medium text-gray-800">{name}</h2>
       </section>
       <section className="border border-gray-300 rounded-lg w-full overflow-hidden">
         <section className="border-b border-gray-300 p-2 flex items-center justify-between gap-4 rounded-t-lg text-gray-600">
           <button className="text-sm p-2 rounded-lg border border-gray-300 hover:bg-gray-100">
             <Copy />
           </button>
-          <button className="text-sm p-2 rounded-lg border border-gray-300 hover:bg-gray-100">
-            <Heart />
-          </button>
+          <FavButton isFav={isFav} />
         </section>
         <section className={`h-48 ${direction} ${colors}`}></section>
       </section>
