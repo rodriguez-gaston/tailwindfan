@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import React, { useState, useEffect } from 'react';
-import Copy from '@/components/icons/Copy';
 import prism from 'prismjs';
 import convertHtml from '@/utils/convertHtml';
 import SwitchView from '../buttons/SwitchView';
@@ -8,6 +7,7 @@ import FavButton from '../buttons/FavButton';
 import { BlockProps, FavBlock } from '@/interface/blocks';
 import View from '@/components/blocks/View';
 import { favBlock } from '@/utils/favBlock';
+import CopyButton from '@/components/buttons/CopyButton';
 
 const Block = ({
   id,
@@ -71,9 +71,7 @@ const Block = ({
               showExample={showExample}
               setShowExample={setShowExample}
             />
-            <button className="text-sm p-2 rounded-lg border border-gray-300 hover:bg-gray-100">
-              <Copy />
-            </button>
+            <CopyButton code={code} />
           </section>
           <FavButton isFav={isFav} onClick={handlingFav} />
         </section>
