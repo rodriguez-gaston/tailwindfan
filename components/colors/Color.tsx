@@ -1,9 +1,9 @@
 /* eslint-disable indent */
 import React, { useState, useEffect } from 'react';
-import Copy from '@/components/icons/Copy';
-import FavButton from '../buttons/FavButton';
+import FavButton from '@/components/buttons/FavButton';
 import { ColorProps, FavColor } from '@/interface/color';
 import { favColor } from '@/utils/favColor';
+import CopyButton from '@/components/buttons/CopyButton';
 
 const Color = ({
   direction = 'bg-gradient-to-b',
@@ -37,9 +37,7 @@ const Color = ({
       </section>
       <section className="border border-gray-300 rounded-lg w-full overflow-hidden">
         <section className="border-b border-gray-300 p-2 flex items-center justify-between gap-4 rounded-t-lg text-gray-600">
-          <button className="text-sm p-2 rounded-lg border border-gray-300 hover:bg-gray-100">
-            <Copy />
-          </button>
+          <CopyButton code={direction + ' ' + colors} />
           <FavButton isFav={isFav} onClick={handlingFav} />
         </section>
         <section className={`h-48 ${direction} ${colors}`}></section>
