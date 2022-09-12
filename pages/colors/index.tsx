@@ -25,7 +25,6 @@ const ColorsPage = () => {
                 key={color.id}
                 direction={gradientDirection}
                 colors={color.colors}
-                name={color.name}
                 id={color.id}
               />
             );
