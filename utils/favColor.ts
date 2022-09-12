@@ -4,7 +4,6 @@ export const favColor = (
   isFav: boolean,
   id: string,
   colors: string,
-  name: string,
   setIsFav: (value: boolean) => void,
 ) => {
   const favColors: FavColor[] | null = JSON.parse(
@@ -19,7 +18,6 @@ export const favColor = (
   const blockToFav = {
     id,
     colors,
-    name,
   };
   window.localStorage.setItem(
     'colors',
