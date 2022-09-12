@@ -8,7 +8,6 @@ import CopyButton from '@/components/buttons/CopyButton';
 const Color = ({
   direction = 'bg-gradient-to-b',
   colors,
-  name,
   id,
   updateFav,
   setUpdateFav,
@@ -16,7 +15,7 @@ const Color = ({
   const [isFav, setIsFav] = useState<boolean>(false);
 
   const handlingFav = () => {
-    favColor(isFav, id, colors, name, setIsFav);
+    favColor(isFav, id, colors, setIsFav);
     setUpdateFav && setUpdateFav(!updateFav);
   };
 
@@ -32,9 +31,6 @@ const Color = ({
 
   return (
     <section className="space-y-4">
-      <section className="space-y-2">
-        <h2 className="text-xl font-medium text-gray-800">{name}</h2>
-      </section>
       <section className="border border-gray-300 rounded-lg w-full overflow-hidden">
         <section className="border-b border-gray-300 p-2 flex items-center justify-between gap-4 rounded-t-lg text-gray-600">
           <CopyButton code={direction + ' ' + colors} />
