@@ -312,7 +312,23 @@ export const blocksList: ICategory[] = [
   {
     name: 'Card',
     url: 'card',
-    blocks: [],
+    blocks: [
+      {
+        id: '1',
+        title: 'Glassy card',
+        container: 'flex flex-col items-center p-8 gap-2',
+      },
+      {
+        id: '2',
+        title: 'With black gradient',
+        container: 'flex flex-col items-center p-8 gap-2',
+      },
+      {
+        id: '3',
+        title: 'Profile card',
+        container: 'flex flex-col items-center p-8 gap-2',
+      },
+    ],
   },
   {
     name: 'Cart',
