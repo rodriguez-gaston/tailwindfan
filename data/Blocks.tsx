@@ -351,6 +351,30 @@ export const blocksList: ICategory[] = [
     blocks: [],
   },
   {
+    name: 'Divider',
+    url: 'divider',
+    blocks: [
+      {
+        id: '1',
+        title: 'Simple divider',
+        container: 'p-8',
+        isShortView: true,
+      },
+      {
+        id: '2',
+        title: 'With text',
+        container: 'p-8',
+        isShortView: true,
+      },
+      {
+        id: '3',
+        title: 'With icon',
+        container: 'p-8 space-y-4',
+        isShortView: true,
+      },
+    ],
+  },
+  {
     name: 'Dropdown',
     url: 'dropdown',
     blocks: [],
