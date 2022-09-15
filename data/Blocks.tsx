@@ -372,6 +372,12 @@ export const blocksList: ICategory[] = [
         container: 'p-8 space-y-4',
         isShortView: true,
       },
+      {
+        id: '4',
+        title: 'With dashed line',
+        container: 'p-8',
+        isShortView: true,
+      },
     ],
   },
   {
