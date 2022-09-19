@@ -471,11 +471,6 @@ export const blocksList: ICategory[] = [
     ],
   },
   {
-    name: 'Payment',
-    url: 'payment',
-    blocks: [],
-  },
-  {
     name: 'Popup',
     url: 'popup',
     blocks: [],
