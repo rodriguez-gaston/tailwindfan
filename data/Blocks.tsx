@@ -328,6 +328,12 @@ export const blocksList: ICategory[] = [
         title: 'Profile card',
         container: 'flex flex-col items-center p-8 gap-2',
       },
+      {
+        id: '4',
+        title: 'Skeleton card',
+        container: 'flex flex-col items-center p-8 gap-2',
+        isShortView: true,
+      },
     ],
   },
   {
