@@ -5,6 +5,7 @@ import Instagram from '@/components/icons/Instagram';
 import Youtube from '@/components/icons/Youtube';
 import Github from '@/components/icons/Github';
 import Medium from '@/components/icons/Medium';
+import SocialLink from '@/components/buttons/SocialLink';
 
 const Footer = () => {
   return (
@@ -25,40 +26,6 @@ const Footer = () => {
             <p className="text-sm text-gray-600">
               Tailwind blocks ready to use
             </p>
-            <section className="flex gap-2">
-              <a
-                href="https://instagram.com/codewithgaston"
-                target="_blank"
-                rel="noreferrer"
-                className="bg-gray-500 p-1 text-white rounded-full hover:bg-gray-700"
-              >
-                <Instagram />
-              </a>
-              <a
-                href="https://www.youtube.com/channel/UC8mpmC8Zyd5ga2AC2pkQ2tA?sub_confirmation=1"
-                target="_blank"
-                rel="noreferrer"
-                className="bg-gray-500 p-1 text-white rounded-full hover:bg-gray-700"
-              >
-                <Youtube />
-              </a>
-              <a
-                href="https://github.com/rodriguez-gaston"
-                target="_blank"
-                rel="noreferrer"
-                className="bg-gray-500 p-1 text-white rounded-full hover:bg-gray-700"
-              >
-                <Github />
-              </a>
-              <a
-                href="https://medium.com/@codewithgaston"
-                target="_blank"
-                rel="noreferrer"
-                className="bg-gray-500 p-1 text-white rounded-full hover:bg-gray-700"
-              >
-                <Medium />
-              </a>
-            </section>
           </section>
           <section className="col-span-1 flex gap-8 text-gray-800 text-sm font-medium">
             <Link href="/blocks">Blocks</Link>
@@ -66,8 +33,26 @@ const Footer = () => {
             <Link href="/learn">Learn</Link>
           </section>
         </section>
-        <section className="col-span-1 lg:col-span-2">
+        <section className="col-span-1 lg:col-span-2 space-y-2">
           <p className="text-xs text-gray-500">by @codewithgaston</p>
+          <section className="flex gap-2">
+            <SocialLink
+              link="https://instagram.com/codewithgaston"
+              icon={<Instagram />}
+            />
+            <SocialLink
+              link="https://www.youtube.com/channel/UC8mpmC8Zyd5ga2AC2pkQ2tA?sub_confirmation=1"
+              icon={<Youtube />}
+            />
+            <SocialLink
+              link="https://github.com/rodriguez-gaston"
+              icon={<Github />}
+            />
+            <SocialLink
+              link="https://medium.com/@codewithgaston"
+              icon={<Medium />}
+            />
+          </section>
         </section>
       </section>
     </footer>
