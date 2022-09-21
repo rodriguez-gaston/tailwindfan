@@ -334,6 +334,26 @@ export const blocksList: ICategory[] = [
         container: 'flex flex-col items-center p-8 gap-2',
         isShortView: true,
       },
+      {
+        id: '5',
+        title: 'Service card',
+        container: 'flex flex-col items-center p-8 gap-2',
+      },
+      {
+        id: '6',
+        title: 'Floating card',
+        container: 'flex flex-col items-center p-8 gap-2',
+      },
+      {
+        id: '7',
+        title: 'Photograph app card',
+        container: 'flex flex-col items-center p-8 gap-2',
+      },
+      {
+        id: '8',
+        title: 'Place card with multiple buttons',
+        container: 'flex flex-col items-center p-8 gap-2',
+      },
     ],
   },
   {
