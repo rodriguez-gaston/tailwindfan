@@ -21,6 +21,7 @@ const Direction = ({ name, onClick, icon }: DirectionProps) => {
         htmlFor={name}
         className="flex items-center gap-1 text-sm p-0.5 rounded-lg border border-gray-300 hover:bg-gray-100 peer-checked:bg-gray-100 cursor-pointer transition"
       >
+        <span className="sr-only">{name}</span>
         {icon}
       </label>
     </section>
