@@ -21,6 +21,7 @@ const CopyButton = ({ code }: Props) => {
       onClick={() => copyToClipboard(code)}
       className="text-sm p-2 rounded-lg border border-gray-300 hover:bg-gray-100"
     >
+      <span className="sr-only">Copy code</span>
       {copied ? <Check /> : <Copy />}
     </button>
   );
