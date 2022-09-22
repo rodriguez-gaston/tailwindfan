@@ -14,6 +14,7 @@ const FavButton = ({ isFav, onClick }: Props) => {
       }`}
       onClick={onClick}
     >
+      <span className="sr-only">Add to favorites</span>
       <Heart />
     </button>
   );
