@@ -354,6 +354,11 @@ export const blocksList: ICategory[] = [
         title: 'Place card with multiple buttons',
         container: 'flex flex-col items-center p-8 gap-2',
       },
+      {
+        id: '9',
+        title: 'Card with image and icons',
+        container: 'flex flex-col items-center p-8 gap-2',
+      },
     ],
   },
   {
