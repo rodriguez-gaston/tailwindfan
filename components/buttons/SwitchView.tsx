@@ -16,6 +16,7 @@ const SwitchView = ({ showExample, setShowExample }: Props) => {
           showExample && 'bg-gray-100'
         }`}
       >
+        <span className="sr-only">View example</span>
         <Eye />
       </button>
       <button
@@ -24,6 +25,7 @@ const SwitchView = ({ showExample, setShowExample }: Props) => {
           !showExample && 'bg-gray-100'
         }`}
       >
+        <span className="sr-only">View code</span>
         <Code />
       </button>
     </section>
