@@ -30,7 +30,7 @@ const Footer = () => {
           <section className="col-span-1 flex gap-8 text-gray-800 text-sm font-medium">
             <Link href="/blocks">Blocks</Link>
             <Link href="/colors">Colors</Link>
-            <Link href="/learn">Learn</Link>
+            <Link href="/favorites">Favorites</Link>
           </section>
         </section>
         <section className="col-span-1 lg:col-span-2 space-y-2">
