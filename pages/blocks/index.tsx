@@ -8,7 +8,15 @@ const BlocksPage: NextPage = () => {
 
   return (
     <section className="py-10 px-8">
-      <section className="max-w-7xl items-center justify-between mx-auto grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <section className="max-w-7xl mx-auto py-4 space-y-4">
+        <h1 className="font-bold text-gray-800 text-3xl md:text-5xl">Blocks</h1>
+        <h3 className="text-md text-gray-500">
+          Find free TailwindCSS componentes for your next project. We have more
+          than 50 UI blocks free to use. We are working every day to add more
+          categories and components.
+        </h3>
+      </section>
+      <section className="max-w-7xl items-center justify-between mx-auto mt-5 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {data.map((category) => {
           const blockCount = category.blocks.length;
 
@@ -16,7 +24,14 @@ const BlocksPage: NextPage = () => {
             <Link href={`/blocks/${category.url}`} key={category.name}>
               <a className="p-4 rounded-lg border-2 border-blue-800 hover:bg-blue-800 hover:text-white flex flex-col items-center gap-2">
                 <section className="flex justify-between items-center w-full">
-                  <h2 className="font-bold">{category.name}</h2>
+                  <div className="flex gap-1 items-center">
+                    <h2 className="font-bold">{category.name}</h2>
+                    {category.isNew && (
+                      <p className="text-xs p-1 rounded bg-blue-300 text-white">
+                        NEW
+                      </p>
+                    )}
+                  </div>
                   <p className="text-sm">
                     {`${blockCount} ${blockCount == 1 ? 'Block' : 'Blocks'}`}{' '}
                   </p>
