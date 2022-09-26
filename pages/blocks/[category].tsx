@@ -4,6 +4,7 @@ import { blocksList } from '@/data/Blocks';
 import Block from '@/components/blocks/Block';
 import BreakpointList from '@/components/buttons/BreakpointList';
 import SectionBar from '@/components/header/SectionBar';
+import Head from 'next/head';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const CategoryPage: NextPage = ({ category }: any) => {
@@ -14,34 +15,40 @@ const CategoryPage: NextPage = ({ category }: any) => {
   const [viewSize, setViewSize] = useState<string>('w-full');
 
   return (
-    <section className="py-5 sm:py-10 px-2 sm:px-8">
-      <section className="max-w-7xl mx-auto space-y-6 sm:space-y-12">
-        <SectionBar
-          title={categoryData?.name ?? ''}
-          backlinkText="Back to all blocks"
-          backlinkUrl="/blocks"
-        >
-          <section className="lg:flex gap-2 hidden">
-            <BreakpointList setViewSize={setViewSize} />
+    <>
+      <Head>
+        <title>{`TailwindFan | ${categoryData?.name}`}</title>
+      </Head>
+
+      <section className="py-5 sm:py-10 px-2 sm:px-8">
+        <section className="max-w-7xl mx-auto space-y-6 sm:space-y-12">
+          <SectionBar
+            title={categoryData?.name ?? ''}
+            backlinkText="Back to all blocks"
+            backlinkUrl="/blocks"
+          >
+            <section className="lg:flex gap-2 hidden">
+              <BreakpointList setViewSize={setViewSize} />
+            </section>
+          </SectionBar>
+          <section className="space-y-8">
+            {categoryData?.blocks.map((block) => {
+              return (
+                <Block
+                  key={block.id + categoryData.name}
+                  id={block.id}
+                  title={block.title}
+                  container={block.container}
+                  isShortView={block.isShortView}
+                  viewSize={viewSize}
+                  category={categoryData.url}
+                />
+              );
+            })}
           </section>
-        </SectionBar>
-        <section className="space-y-8">
-          {categoryData?.blocks.map((block) => {
-            return (
-              <Block
-                key={block.id + categoryData.name}
-                id={block.id}
-                title={block.title}
-                container={block.container}
-                isShortView={block.isShortView}
-                viewSize={viewSize}
-                category={categoryData.url}
-              />
-            );
-          })}
         </section>
       </section>
-    </section>
+    </>
   );
 };
 
