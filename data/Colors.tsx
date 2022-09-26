@@ -11,7 +11,7 @@ export const colorsList: IColor[] = [
   },
   {
     id: '3',
-    colors: 'from-gray-500 to-gray-900',
+    colors: 'from-violet-500 to-orange-300',
   },
   {
     id: '4',
@@ -27,7 +27,7 @@ export const colorsList: IColor[] = [
   },
   {
     id: '7',
-    colors: 'from-violet-500 to-orange-300',
+    colors: 'from-gray-500 to-gray-900',
   },
   {
     id: '8',
