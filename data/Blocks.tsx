@@ -240,6 +240,7 @@ export const blocksList: ICategory[] = [
   {
     name: 'Buttons Group',
     url: 'buttons-group',
+    isNew: true,
     blocks: [
       {
         id: '1',
@@ -381,28 +382,33 @@ export const blocksList: ICategory[] = [
         title: 'With background image',
         container: 'flex flex-col items-center p-8 gap-2',
       },
+      {
+        id: '14',
+        title: 'On hover reveal',
+        container: 'flex flex-col items-center p-8 gap-2',
+      },
     ],
   },
-  {
-    name: 'Cart',
-    url: 'cart',
-    blocks: [],
-  },
-  {
-    name: 'Checkout',
-    url: 'checkout',
-    blocks: [],
-  },
-  {
-    name: 'Contact',
-    url: 'contact',
-    blocks: [],
-  },
-  {
-    name: 'CTA',
-    url: 'cta',
-    blocks: [],
-  },
+  // {
+  //   name: 'Cart',
+  //   url: 'cart',
+  //   blocks: [],
+  // },
+  // {
+  //   name: 'Checkout',
+  //   url: 'checkout',
+  //   blocks: [],
+  // },
+  // {
+  //   name: 'Contact',
+  //   url: 'contact',
+  //   blocks: [],
+  // },
+  // {
+  //   name: 'CTA',
+  //   url: 'cta',
+  //   blocks: [],
+  // },
   {
     name: 'Divider',
     url: 'divider',
@@ -433,51 +439,51 @@ export const blocksList: ICategory[] = [
       },
     ],
   },
-  {
-    name: 'Dropdown',
-    url: 'dropdown',
-    blocks: [],
-  },
-  {
-    name: 'FAQ',
-    url: 'faq',
-    blocks: [],
-  },
-  {
-    name: 'Filter',
-    url: 'filter',
-    blocks: [],
-  },
-  {
-    name: 'Footer',
-    url: 'footer',
-    blocks: [],
-  },
-  {
-    name: 'Gallery',
-    url: 'gallery',
-    blocks: [],
-  },
-  {
-    name: 'Header',
-    url: 'header',
-    blocks: [],
-  },
-  {
-    name: 'Hero',
-    url: 'hero',
-    blocks: [],
-  },
-  {
-    name: 'Input',
-    url: 'input',
-    blocks: [],
-  },
-  {
-    name: 'Menu',
-    url: 'menu',
-    blocks: [],
-  },
+  // {
+  //   name: 'Dropdown',
+  //   url: 'dropdown',
+  //   blocks: [],
+  // },
+  // {
+  //   name: 'FAQ',
+  //   url: 'faq',
+  //   blocks: [],
+  // },
+  // {
+  //   name: 'Filter',
+  //   url: 'filter',
+  //   blocks: [],
+  // },
+  // {
+  //   name: 'Footer',
+  //   url: 'footer',
+  //   blocks: [],
+  // },
+  // {
+  //   name: 'Gallery',
+  //   url: 'gallery',
+  //   blocks: [],
+  // },
+  // {
+  //   name: 'Header',
+  //   url: 'header',
+  //   blocks: [],
+  // },
+  // {
+  //   name: 'Hero',
+  //   url: 'hero',
+  //   blocks: [],
+  // },
+  // {
+  //   name: 'Input',
+  //   url: 'input',
+  //   blocks: [],
+  // },
+  // {
+  //   name: 'Menu',
+  //   url: 'menu',
+  //   blocks: [],
+  // },
   {
     name: 'Notification',
     url: 'notification',
@@ -523,74 +529,74 @@ export const blocksList: ICategory[] = [
       },
     ],
   },
-  {
-    name: 'Popup',
-    url: 'popup',
-    blocks: [],
-  },
-  {
-    name: 'Pricing',
-    url: 'pricing',
-    blocks: [],
-  },
-  {
-    name: 'Product',
-    url: 'product',
-    blocks: [],
-  },
-  {
-    name: 'Product Card',
-    url: 'product-card',
-    blocks: [],
-  },
-  {
-    name: 'Product List',
-    url: 'product-list',
-    blocks: [],
-  },
-  {
-    name: 'Radio',
-    url: 'radio',
-    blocks: [],
-  },
-  {
-    name: 'Review',
-    url: 'review',
-    blocks: [],
-  },
-  {
-    name: 'Section',
-    url: 'section',
-    blocks: [],
-  },
-  {
-    name: 'Stat',
-    url: 'stat',
-    blocks: [],
-  },
-  {
-    name: 'Step',
-    url: 'step',
-    blocks: [],
-  },
-  {
-    name: 'Tab',
-    url: 'tab',
-    blocks: [],
-  },
-  {
-    name: 'Table',
-    url: 'table',
-    blocks: [],
-  },
-  {
-    name: 'Team',
-    url: 'team',
-    blocks: [],
-  },
-  {
-    name: 'Testimonial',
-    url: 'testimonial',
-    blocks: [],
-  },
+  // {
+  //   name: 'Popup',
+  //   url: 'popup',
+  //   blocks: [],
+  // },
+  // {
+  //   name: 'Pricing',
+  //   url: 'pricing',
+  //   blocks: [],
+  // },
+  // {
+  //   name: 'Product',
+  //   url: 'product',
+  //   blocks: [],
+  // },
+  // {
+  //   name: 'Product Card',
+  //   url: 'product-card',
+  //   blocks: [],
+  // },
+  // {
+  //   name: 'Product List',
+  //   url: 'product-list',
+  //   blocks: [],
+  // },
+  // {
+  //   name: 'Radio',
+  //   url: 'radio',
+  //   blocks: [],
+  // },
+  // {
+  //   name: 'Review',
+  //   url: 'review',
+  //   blocks: [],
+  // },
+  // {
+  //   name: 'Section',
+  //   url: 'section',
+  //   blocks: [],
+  // },
+  // {
+  //   name: 'Stat',
+  //   url: 'stat',
+  //   blocks: [],
+  // },
+  // {
+  //   name: 'Step',
+  //   url: 'step',
+  //   blocks: [],
+  // },
+  // {
+  //   name: 'Tab',
+  //   url: 'tab',
+  //   blocks: [],
+  // },
+  // {
+  //   name: 'Table',
+  //   url: 'table',
+  //   blocks: [],
+  // },
+  // {
+  //   name: 'Team',
+  //   url: 'team',
+  //   blocks: [],
+  // },
+  // {
+  //   name: 'Testimonial',
+  //   url: 'testimonial',
+  //   blocks: [],
+  // },
 ];
