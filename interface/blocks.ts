@@ -9,6 +9,7 @@ export interface ICategory {
   name: string;
   url: string;
   blocks: IBlock[];
+  isNew?: boolean;
 }
 
 export interface BlockProps {
