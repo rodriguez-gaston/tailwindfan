@@ -20,7 +20,6 @@ const Header = () => {
           <Link href="/blocks">Blocks</Link>
           <Link href="/colors">Colors</Link>
           <Link href="/favorites">Favorites</Link>
-          <Link href="/learn">Learn</Link>
         </nav>
       </section>
     </header>
