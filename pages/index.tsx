@@ -39,7 +39,7 @@ export default function Home() {
       <section className="bg-gradient-to-b from-white to-blue-50 py-20 px-8">
         <section className="max-w-7xl mx-auto text-center">
           <section className="space-y-4">
-            <h1 className="text-6xl font-bold text-gray-800">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-800">
               Build your next project with a new look
             </h1>
             <h4 className="text-gray-600">
