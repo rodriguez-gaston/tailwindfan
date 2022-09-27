@@ -34,8 +34,17 @@ const Footer = () => {
           </section>
         </section>
         <section className="col-span-1 lg:col-span-2 space-y-2">
-          <p className="text-xs text-gray-500">by @codewithgaston</p>
-          <section className="flex gap-2">
+          <p className="text-xs text-gray-500">
+            by{' '}
+            <a
+              href="https://codewithgaston.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              @codewithgaston
+            </a>
+          </p>
+          {/* <section className="flex gap-2">
             <SocialLink
               link="https://instagram.com/codewithgaston"
               icon={<Instagram />}
@@ -52,7 +61,7 @@ const Footer = () => {
               link="https://medium.com/@codewithgaston"
               icon={<Medium />}
             />
-          </section>
+          </section> */}
         </section>
       </section>
     </footer>
