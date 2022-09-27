@@ -39,18 +39,10 @@ const SectionBar = ({ title, backlinkText, backlinkUrl, children }: Props) => {
       }`}
     >
       <section>
-        {isScrolling && (
-          <Link href={backlinkUrl}>
-            <a className="text-gray-500 text-sm">&larr;{` ${backlinkText}`}</a>
-          </Link>
-        )}
-        <h1
-          className={`font-bold text-gray-800 ${
-            isScrolling ? 'text-xl md:text-3xl' : 'text-3xl md:text-5xl'
-          }`}
-        >
-          {title}
-        </h1>
+        <Link href={backlinkUrl}>
+          <a className="text-gray-500 text-sm">&larr;{` ${backlinkText}`}</a>
+        </Link>
+        <h1 className="font-bold text-gray-800 text-xl md:text-3xl">{title}</h1>
       </section>
       {children}
     </section>
