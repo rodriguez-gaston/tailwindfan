@@ -404,6 +404,17 @@ export const blocksList: ICategory[] = [
         title: 'Sidebar cart',
         container: 'relative',
       },
+      {
+        id: '3',
+        title: 'Modal cart',
+        container:
+          'flex justify-center items-center w-screen h-screen p-4 bg-black/25',
+      },
+      {
+        id: '4',
+        title: 'Cart page',
+        container: 'flex justify-center p-4',
+      },
     ],
   },
   // {
