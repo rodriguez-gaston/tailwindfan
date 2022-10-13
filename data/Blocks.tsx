@@ -240,7 +240,6 @@ export const blocksList: ICategory[] = [
   {
     name: 'Buttons Group',
     url: 'buttons-group',
-    isNew: true,
     blocks: [
       {
         id: '1',
@@ -389,11 +388,24 @@ export const blocksList: ICategory[] = [
       },
     ],
   },
-  // {
-  //   name: 'Cart',
-  //   url: 'cart',
-  //   blocks: [],
-  // },
+  {
+    name: 'Cart',
+    url: 'cart',
+    isNew: true,
+    blocks: [
+      {
+        id: '1',
+        title: 'Floating cart notification',
+        container: 'relative',
+        isShortView: true,
+      },
+      {
+        id: '2',
+        title: 'Sidebar cart',
+        container: 'relative',
+      },
+    ],
+  },
   // {
   //   name: 'Checkout',
   //   url: 'checkout',
