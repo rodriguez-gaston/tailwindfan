@@ -44,7 +44,7 @@ const Footer = () => {
               @codewithgaston
             </a>
           </p>
-          {/* <section className="flex gap-2">
+          <section className="flex gap-2">
             <SocialLink
               link="https://instagram.com/codewithgaston"
               icon={<Instagram />}
@@ -61,7 +61,7 @@ const Footer = () => {
               link="https://medium.com/@codewithgaston"
               icon={<Medium />}
             />
-          </section> */}
+          </section>
         </section>
       </section>
     </footer>
