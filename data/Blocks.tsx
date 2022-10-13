@@ -417,11 +417,23 @@ export const blocksList: ICategory[] = [
       },
     ],
   },
-  // {
-  //   name: 'Checkout',
-  //   url: 'checkout',
-  //   blocks: [],
-  // },
+  {
+    name: 'Checkout',
+    url: 'checkout',
+    isNew: true,
+    blocks: [
+      {
+        id: '1',
+        title: 'Two columns with image',
+        container: 'flex justify-center p-4',
+      },
+      {
+        id: '2',
+        title: 'Two columns with detail',
+        container: 'flex justify-center p-4',
+      },
+    ],
+  },
   // {
   //   name: 'Contact',
   //   url: 'contact',
