@@ -439,11 +439,17 @@ export const blocksList: ICategory[] = [
       },
     ],
   },
-  // {
-  //   name: 'Contact',
-  //   url: 'contact',
-  //   blocks: [],
-  // },
+  {
+    name: 'Contact',
+    url: 'contact',
+    blocks: [
+      {
+        id: '1',
+        title: 'Simple form',
+        container: 'flex justify-center p-4',
+      },
+    ],
+  },
   // {
   //   name: 'CTA',
   //   url: 'cta',
