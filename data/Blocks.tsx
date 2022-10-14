@@ -432,6 +432,11 @@ export const blocksList: ICategory[] = [
         title: 'Two columns with detail',
         container: 'flex justify-center p-4',
       },
+      {
+        id: '3',
+        title: 'Payment checkout',
+        container: 'flex justify-center p-4 bg-gray-200',
+      },
     ],
   },
   // {
