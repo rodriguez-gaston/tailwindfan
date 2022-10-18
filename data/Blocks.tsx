@@ -448,6 +448,11 @@ export const blocksList: ICategory[] = [
         title: 'Simple form',
         container: 'flex justify-center p-4',
       },
+      {
+        id: '2',
+        title: 'With message and dropdowns',
+        container: 'flex justify-center p-4',
+      },
     ],
   },
   // {
