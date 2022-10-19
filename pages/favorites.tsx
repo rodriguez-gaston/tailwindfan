@@ -35,6 +35,16 @@ const FavoritesPage = () => {
         <meta
           name="description"
           content="Find your favorite blocks and colors."
+          key="desc"
+        />
+        <meta property="og:title" content="TailwindFan | Favorites" />
+        <meta
+          property="og:description"
+          content="Find your favorite blocks and colors."
+        />
+        <meta
+          property="og:url"
+          content="https://www.tailwindfan.com/favorites"
         />
       </Head>
 
