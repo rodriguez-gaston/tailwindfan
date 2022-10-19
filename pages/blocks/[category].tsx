@@ -18,6 +18,23 @@ const CategoryPage: NextPage = ({ category }: any) => {
     <>
       <Head>
         <title>{`TailwindFan | ${categoryData?.name}`}</title>
+        <meta
+          name="description"
+          content={`Find free ${categoryData?.name} componentes for your next project. We have ${categoryData?.blocks.length} ${categoryData?.url} blocks free to use. We are working every day to add more components.`}
+          key="desc"
+        />
+        <meta
+          property="og:title"
+          content={`TailwindFan | ${categoryData?.name}`}
+        />
+        <meta
+          property="og:description"
+          content={`Find free ${categoryData?.name} componentes for your next project. We have ${categoryData?.blocks.length} ${categoryData?.url} blocks free to use. We are working every day to add more components.`}
+        />
+        <meta
+          property="og:url"
+          content={`https://www.tailwindfan.com/blocks/${categoryData?.url}`}
+        />
       </Head>
 
       <section className="py-5 sm:py-10 px-2 sm:px-8">
