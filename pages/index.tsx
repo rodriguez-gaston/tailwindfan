@@ -32,7 +32,17 @@ export default function Home() {
         <meta
           name="description"
           content="A complete library with Tailwind CSS UI blocks and components ready to use for any kind of project. Also you can learn about Tailwind CSS."
+          key="desc"
         />
+        <meta
+          property="og:title"
+          content="Build your next project with a new look"
+        />
+        <meta
+          property="og:description"
+          content="Find free TailwindCSS componentes for your next project. We have more than 50 UI blocks free to use. We are working every day to add more categories and components."
+        />
+        <meta property="og:url" content="https://www.tailwindfan.com" />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="canonical"
