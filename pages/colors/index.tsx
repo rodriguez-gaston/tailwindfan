@@ -18,7 +18,14 @@ const ColorsPage = () => {
         <meta
           name="description"
           content="Find beatiful gradients to use in any TailwindCSS project."
+          key="desc"
         />
+        <meta property="og:title" content="TailwindFan | Colors" />
+        <meta
+          property="og:description"
+          content="Find beatiful gradients to use in any TailwindCSS project."
+        />
+        <meta property="og:url" content="https://www.tailwindfan.com/colors" />
       </Head>
 
       <section className="bg-gradient-to-b from-white to-cyan-50 py-5 sm:py-10 px-2 sm:px-8">
