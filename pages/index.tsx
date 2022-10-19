@@ -34,6 +34,11 @@ export default function Home() {
           content="A complete library with Tailwind CSS UI blocks and components ready to use for any kind of project. Also you can learn about Tailwind CSS."
         />
         <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="canonical"
+          href="https://www.tailwindfan.com/"
+          key="canonical"
+        />
       </Head>
 
       <section className="bg-gradient-to-b from-white to-blue-50 py-20 px-8">
