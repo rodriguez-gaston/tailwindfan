@@ -1,0 +1,18 @@
+<form class="max-w-lg w-full space-y-10">
+  <input type="text" id="name" name="name" placeholder="Name" class="placeholder:text-gray-400 w-full border-b border-gray-300 focus:border-sky-500 text-base outline-none text-gray-700 py-1 px-2 transition-colors duration-300 ease-in-out">
+  <input type="email" id="email" name="email" placeholder="Email" class="placeholder:text-gray-400 w-full border-b border-gray-300 focus:border-sky-500 text-base outline-none text-gray-700 py-1 px-2 transition-colors duration-300 ease-in-out">
+  <input type="text" id="message" name="message" placeholder="Message" class="placeholder:text-gray-400 w-full border-b border-gray-300 focus:border-sky-500 text-base outline-none text-gray-700 py-1 px-2 transition-colors duration-300 ease-in-out">
+  <div>
+    <input type="file" name="file" id="file" class="hidden">
+    <label for="file" class="inline-flex gap-2 cursor-pointer text-gray-400 hover:text-gray-700">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M15 7l-6.5 6.5a1.5 1.5 0 0 0 3 3l6.5 -6.5a3 3 0 0 0 -6 -6l-6.5 6.5a4.5 4.5 0 0 0 9 9l6.5 -6.5" />
+      </svg>
+      Attach files
+    </label>
+  </div>
+  <button type="submit" class="bg-sky-500 hover:bg-sky-700 py-2 px-5 text-white flex gap-2 justify-center items-center">
+    Send
+  </button>
+</form>
