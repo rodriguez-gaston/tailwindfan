@@ -16,7 +16,16 @@ const BlocksPage: NextPage = () => {
           content="Find free TailwindCSS componentes for your next project. We have more
           than 50 UI blocks free to use. We are working every day to add more
           categories and components."
+          key="desc"
         />
+        <meta property="og:title" content="TailwindFan | Blocks" />
+        <meta
+          property="og:description"
+          content="Find free TailwindCSS componentes for your next project. We have more
+          than 50 UI blocks free to use. We are working every day to add more
+          categories and components."
+        />
+        <meta property="og:url" content="https://www.tailwindfan.com/blocks" />
       </Head>
 
       <section className="py-10 px-8">
