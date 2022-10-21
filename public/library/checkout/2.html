@@ -1,36 +1,36 @@
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-2">
-  <div class="col-span-1 flex flex-col justify-center items-center">
+<div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-2">
+  <div class="flex flex-col items-center justify-center col-span-1">
     <section class="w-full md:px-4">
       <h1 class="text-xl font-semibold">Payment details</h1>
-      <h2 class="text-xs text-gray-600 mt-2">Enter your payment details below to purchase.</h2>
+      <h2 class="mt-2 text-xs text-gray-600">Enter your payment details below to purchase.</h2>
       <form class="grid grid-cols-4 gap-4 mt-4">
         <div class="col-span-4">
-          <label class="mb-1 block text-sm text-gray-600 font-semibold" for="email">Email address</label>
-          <input class="w-full rounded-lg border-gray-200 p-2 text-sm placeholder-gray-400 focus:ring-0 focus:border-blue-500" type="email" id="email" placeholder="example@email.com" />
+          <label class="block mb-1 text-sm font-semibold text-gray-600" for="email">Email address</label>
+          <input class="w-full p-2 text-sm placeholder-gray-400 border-gray-200 rounded-lg focus:ring-0 focus:border-blue-500" type="email" id="email" placeholder="example@email.com" />
         </div>
         <div class="col-span-4">
-          <label class="mb-1 block text-sm text-gray-600 font-semibold" for="name">Full name</label>
-          <input class="w-full rounded-lg border-gray-200 p-2 text-sm placeholder-gray-400 focus:ring-0 focus:border-blue-500" type="text" id="name" placeholder="John Doe" />
+          <label class="block mb-1 text-sm font-semibold text-gray-600" for="name">Full name</label>
+          <input class="w-full p-2 text-sm placeholder-gray-400 border-gray-200 rounded-lg focus:ring-0 focus:border-blue-500" type="text" id="name" placeholder="John Doe" />
         </div>
         <div class="col-span-4">
-          <label class="mb-1 block text-sm text-gray-600 font-semibold" for="card">Card number</label>
-          <input class="w-full rounded-lg border-gray-200 p-2 text-sm placeholder-gray-400 focus:ring-0 focus:border-blue-500" type="text" id="card" placeholder="1234 1234 1234 1234" />
+          <label class="block mb-1 text-sm font-semibold text-gray-600" for="card">Card number</label>
+          <input class="w-full p-2 text-sm placeholder-gray-400 border-gray-200 rounded-lg focus:ring-0 focus:border-blue-500" type="text" id="card" placeholder="1234 1234 1234 1234" />
         </div>
         <div class="col-span-2">
-          <label class="mb-1 block text-sm text-gray-600 font-semibold" for="cvv">CVV</label>
-          <input class="w-full rounded-lg border-gray-200 p-2 text-sm placeholder-gray-400 focus:ring-0 focus:border-blue-500" type="password" id="cvv" placeholder="123" />
+          <label class="block mb-1 text-sm font-semibold text-gray-600" for="cvv">CVV</label>
+          <input class="w-full p-2 text-sm placeholder-gray-400 border-gray-200 rounded-lg focus:ring-0 focus:border-blue-500" type="password" id="cvv" placeholder="123" />
         </div>
         <div class="col-span-1">
-          <label class="mb-1 block text-sm text-gray-600 font-semibold" for="month">Month</label>
-          <input class="w-full rounded-lg border-gray-200 p-2 text-sm placeholder-gray-400 focus:ring-0 focus:border-blue-500" type="text" id="month" placeholder="MM" />
+          <label class="block mb-1 text-sm font-semibold text-gray-600" for="month">Month</label>
+          <input class="w-full p-2 text-sm placeholder-gray-400 border-gray-200 rounded-lg focus:ring-0 focus:border-blue-500" type="text" id="month" placeholder="MM" />
         </div>
         <div class="col-span-1">
-          <label class="mb-1 block text-sm text-gray-600 font-semibold" for="year">Year</label>
-          <input class="w-full rounded-lg border-gray-200 p-2 text-sm placeholder-gray-400 focus:ring-0 focus:border-blue-500" type="text" id="year" placeholder="YYYY" />
+          <label class="block mb-1 text-sm font-semibold text-gray-600" for="year">Year</label>
+          <input class="w-full p-2 text-sm placeholder-gray-400 border-gray-200 rounded-lg focus:ring-0 focus:border-blue-500" type="text" id="year" placeholder="YYYY" />
         </div>
         <div class="col-span-3">
-          <label class="mb-1 block text-sm text-gray-600 font-semibold" for="country">Country</label>
-          <select class="w-full rounded-lg border-gray-200 p-2 text-sm placeholder-gray-400 focus:ring-0 focus:border-blue-500" type="text" id="country" placeholder="">
+          <label class="block mb-1 text-sm font-semibold text-gray-600" for="country">Country</label>
+          <select class="w-full p-2 text-sm placeholder-gray-400 border-gray-200 rounded-lg focus:ring-0 focus:border-blue-500" type="text" id="country" placeholder="">
             <option>Australia</option>
             <option>Canada</option>
             <option>Denmark</option>
@@ -40,27 +40,27 @@
           </select>
         </div>
         <div class="col-span-1">
-          <label class="mb-1 block text-sm text-gray-600 font-semibold" for="zip">ZIP</label>
-          <input class="w-full rounded-lg border-gray-200 p-2 text-sm placeholder-gray-400 focus:ring-0 focus:border-blue-500" type="text" id="zip" placeholder="12345" />
+          <label class="block mb-1 text-sm font-semibold text-gray-600" for="zip">ZIP</label>
+          <input class="w-full p-2 text-sm placeholder-gray-400 border-gray-200 rounded-lg focus:ring-0 focus:border-blue-500" type="text" id="zip" placeholder="12345" />
         </div>
         <div class="col-span-4">
-          <button type="submit" class="bg-black p-3 rounded-lg text-white w-full text-sm">Complete payment - <span class="font-semibold">$180.00</span></button>
+          <button type="submit" class="w-full p-3 text-sm text-white bg-black rounded-lg">Complete payment - <span class="font-semibold">$180.00</span></button>
         </div>
       </form>
     </section>
   </div>
   <div class="col-span-1">
     <p class="text-lg font-bold">Your cart</p>
-    <div class="flex-col justify-start space-y-4 mt-2">
+    <div class="flex-col justify-start mt-2 space-y-4">
       <div>
-        <div class="flex gap-2 items-center">
+        <div class="flex items-center gap-2">
           <div class="relative w-1/3">
-            <div class="absolute -top-2 -right-2 h-5 w-5 flex items-center justify-center bg-white border border-gray-300 rounded-full">
+            <div class="absolute flex items-center justify-center w-5 h-5 bg-white border border-gray-300 rounded-full -top-2 -right-2">
               <p class="text-xs">1</p>
             </div>
             <img class="border border-gray-300 rounded" src="https://images.pexels.com/photos/1456705/pexels-photo-1456705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Shoes">
           </div>
-          <section class="w-2/3 flex items-center justify-between">
+          <section class="flex items-center justify-between w-2/3">
             <div>
               <h4 class="text-sm font-bold">Nike Zoom</h4>
               <p class="text-xs text-gray-600">Size: <span class="font-semibold">12.5</span></p>
@@ -69,16 +69,16 @@
           </section>
         </div>
       </div>
-      <div class="h-px bg-gray-300 w-full"></div>
+      <div class="w-full h-px bg-gray-300"></div>
       <div>
-        <div class="flex gap-2 items-center">
+        <div class="flex items-center gap-2">
           <div class="relative w-1/3">
-            <div class="absolute -top-2 -right-2 h-5 w-5 flex items-center justify-center bg-white border border-gray-300 rounded-full">
+            <div class="absolute flex items-center justify-center w-5 h-5 bg-white border border-gray-300 rounded-full -top-2 -right-2">
               <p class="text-xs">2</p>
             </div>
             <img class="border border-gray-300 rounded" src="https://images.pexels.com/photos/7543641/pexels-photo-7543641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Shoes">
           </div>
-          <section class="w-2/3 flex items-center justify-between">
+          <section class="flex items-center justify-between w-2/3">
             <div>
               <h4 class="text-sm font-bold">Nike Air</h4>
               <p class="text-xs text-gray-600">Size: <span class="font-semibold">11.5</span></p>
@@ -87,10 +87,10 @@
           </section>
         </div>
       </div>
-      <div class="h-px bg-gray-300 w-full"></div>
-      <div class="hidden md:flex justify-between items-center">
-        <p class="text-center text-sm text-gray-800">Total</p>
-        <p class="text-center text-lg text-gray-800 font-bold">$180.00</p>
+      <div class="w-full h-px bg-gray-300"></div>
+      <div class="items-center justify-between hidden md:flex">
+        <p class="text-sm text-center text-gray-800">Total</p>
+        <p class="text-lg font-bold text-center text-gray-800">$180.00</p>
       </div>
     </div>
   </div>

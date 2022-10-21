@@ -1,12 +1,12 @@
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-2 items-start">
-  <div class="bg-white rounded-xl border border-gray-300 col-span-1 flex flex-col justify-start items-center p-4">
+<div class="grid items-start grid-cols-1 gap-4 md:grid-cols-2 md:gap-2">
+  <div class="flex flex-col items-center justify-start col-span-1 p-4 bg-white border border-gray-300 rounded-xl">
     <section class="w-full">
       <h1 class="text-lg font-semibold">Payment information</h1>
       <form class="grid grid-cols-4 gap-4 mt-4">
-        <div class="col-span-4 flex gap-4">
+        <div class="flex col-span-4 gap-4">
           <div class="relative">
             <input type="radio" name="payment" id="payment1" class="hidden peer">
-            <label for="payment1" class="flex items-center justify-center rounded-lg border border-gray-200 p-2 text-sm peer-checked:bg-gray-200 text-gray-600 cursor-pointer transition">
+            <label for="payment1" class="flex items-center justify-center p-2 text-sm text-gray-600 transition border border-gray-200 rounded-lg cursor-pointer peer-checked:bg-gray-200">
               <p class="inline-block">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -20,7 +20,7 @@
           </div>
           <div class="relative">
             <input type="radio" name="payment" id="payment2" class="hidden peer">
-            <label for="payment2" class="flex items-center justify-center rounded-lg border border-gray-200 p-2 text-sm peer-checked:bg-gray-200 text-gray-600 cursor-pointer transition">
+            <label for="payment2" class="flex items-center justify-center p-2 text-sm text-gray-600 transition border border-gray-200 rounded-lg cursor-pointer peer-checked:bg-gray-200">
               <p class="inline-block">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -31,7 +31,7 @@
           </div>
           <div class="relative">
             <input type="radio" name="payment" id="payment3" class="hidden peer">
-            <label for="payment3" class="flex items-center justify-center rounded-lg border border-gray-200 p-2 text-sm peer-checked:bg-gray-200 text-gray-600 cursor-pointer transition">
+            <label for="payment3" class="flex items-center justify-center p-2 text-sm text-gray-600 transition border border-gray-200 rounded-lg cursor-pointer peer-checked:bg-gray-200">
               <p class="inline-block">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -48,38 +48,38 @@
           </div>
         </div>
         <div class="col-span-4">
-          <label class="mb-1 block text-sm text-gray-600 font-semibold" for="name">Name on card</label>
-          <input class="w-full rounded-lg border-gray-200 p-2 text-sm placeholder-gray-400 focus:ring-0 focus:border-blue-500" type="text" id="name" placeholder="John Doe" />
+          <label class="block mb-1 text-sm font-semibold text-gray-600" for="name">Name on card</label>
+          <input class="w-full p-2 text-sm placeholder-gray-400 border-gray-200 rounded-lg focus:ring-0 focus:border-blue-500" type="text" id="name" placeholder="John Doe" />
         </div>
         <div class="col-span-4 md:col-span-2">
-          <label class="mb-1 block text-sm text-gray-600 font-semibold" for="card">Card number</label>
-          <input class="w-full rounded-lg border-gray-200 p-2 text-sm placeholder-gray-400 focus:ring-0 focus:border-blue-500" type="text" id="card" placeholder="1234 1234 1234 1234" />
+          <label class="block mb-1 text-sm font-semibold text-gray-600" for="card">Card number</label>
+          <input class="w-full p-2 text-sm placeholder-gray-400 border-gray-200 rounded-lg focus:ring-0 focus:border-blue-500" type="text" id="card" placeholder="1234 1234 1234 1234" />
         </div>
-        <div class="hidden md:block col-span-2"></div>
+        <div class="hidden col-span-2 md:block"></div>
         <div class="col-span-2 md:col-span-1">
-          <label class="mb-1 block text-sm text-gray-600 font-semibold" for="cvv">CVV</label>
-          <input class="w-full rounded-lg border-gray-200 p-2 text-sm placeholder-gray-400 focus:ring-0 focus:border-blue-500" type="password" id="cvv" placeholder="123" />
+          <label class="block mb-1 text-sm font-semibold text-gray-600" for="cvv">CVV</label>
+          <input class="w-full p-2 text-sm placeholder-gray-400 border-gray-200 rounded-lg focus:ring-0 focus:border-blue-500" type="password" id="cvv" placeholder="123" />
         </div>
         <div class="col-span-2 md:col-span-1">
-          <label class="mb-1 block text-sm text-gray-600 font-semibold" for="expires">Expires</label>
-          <input class="w-full rounded-lg border-gray-200 p-2 text-sm placeholder-gray-400 focus:ring-0 focus:border-blue-500" type="text" id="expires" placeholder="MM/YYYY" />
+          <label class="block mb-1 text-sm font-semibold text-gray-600" for="expires">Expires</label>
+          <input class="w-full p-2 text-sm placeholder-gray-400 border-gray-200 rounded-lg focus:ring-0 focus:border-blue-500" type="text" id="expires" placeholder="MM/YYYY" />
         </div>
-        <div class="col-span-4 flex gap-4">
-          <button class="border border-black py-3 px-6 rounded-lg text-sm">Back</button>
-          <button type="submit" class="bg-black p-3 rounded-lg text-white w-full text-sm">Complete payment - <span class="font-semibold">$180.00</span></button>
+        <div class="flex col-span-4 gap-4">
+          <button class="px-6 py-3 text-sm border border-black rounded-lg">Back</button>
+          <button type="submit" class="w-full p-3 text-sm text-white bg-black rounded-lg">Complete payment - <span class="font-semibold">$180.00</span></button>
         </div>
       </form>
     </section>
   </div>
-  <div class="bg-white rounded-xl border border-gray-300 col-span-1 p-4">
+  <div class="col-span-1 p-4 bg-white border border-gray-300 rounded-xl">
     <p class="text-lg font-bold">Order summary</p>
-    <div class="flex-col justify-start space-y-4 mt-2">
-      <section class="flex gap-2 justify-between items-center text-gray-500">
+    <div class="flex-col justify-start mt-2 space-y-4">
+      <section class="flex items-center justify-between gap-2 text-gray-500">
         <div class="flex gap-2">
           <p>x1</p>
           <h4 class="font-bold">Nike Zoom</h4>
         </div>
-        <div class="flex gap-2 items-center">
+        <div class="flex items-center gap-2">
           <p class="font-bold">$70.00</p>
           <button>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -93,12 +93,12 @@
           </button>
         </div>
       </section>
-      <section class="flex gap-2 justify-between items-center text-gray-500">
+      <section class="flex items-center justify-between gap-2 text-gray-500">
         <div class="flex gap-2">
           <p>x2</p>
           <h4 class="font-bold">Nike Air</h4>
         </div>
-        <div class="flex gap-2 items-center">
+        <div class="flex items-center gap-2">
           <p class="font-bold">$110.00</p>
           <button>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -112,19 +112,19 @@
           </button>
         </div>
       </section>
-      <div class="h-px bg-gray-300 w-full"></div>
-      <div class="hidden md:flex justify-between items-center text-center text-lg text-gray-800 font-bold">
+      <div class="w-full h-px bg-gray-300"></div>
+      <div class="items-center justify-between hidden text-lg font-bold text-center text-gray-800 md:flex">
         <p>Order total</p>
         <p>$180.00</p>
       </div>
     </div>
-    <form class="grid grid-cols-4 gap-4 mt-4 items-end">
+    <form class="grid items-end grid-cols-4 gap-4 mt-4">
       <div class="col-span-3">
-        <label class="mb-1 block text-sm text-gray-600 font-semibold" for="coupon">Coupon code</label>
-        <input class="w-full rounded-lg border-gray-200 p-2 text-sm placeholder-gray-400 focus:ring-0 focus:border-blue-500" type="text" id="coupon" placeholder="ABC123" />
+        <label class="block mb-1 text-sm font-semibold text-gray-600" for="coupon">Coupon code</label>
+        <input class="w-full p-2 text-sm placeholder-gray-400 border-gray-200 rounded-lg focus:ring-0 focus:border-blue-500" type="text" id="coupon" placeholder="ABC123" />
       </div>
-      <div class="col-span-1 flex gap-4">
-        <button type="submit" class="border border-black p-2 rounded-lg w-full text-sm">Apply</button>
+      <div class="flex col-span-1 gap-4">
+        <button type="submit" class="w-full p-2 text-sm border border-black rounded-lg">Apply</button>
       </div>
     </form>
   </div>

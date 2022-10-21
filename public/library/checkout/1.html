@@ -1,36 +1,36 @@
 <div class="grid grid-cols-1 md:grid-cols-2">
-  <div class="col-span-1 flex flex-col justify-center items-center">
+  <div class="flex flex-col items-center justify-center col-span-1">
     <section class="w-full md:px-4">
       <h1 class="text-xl font-semibold">Payment details</h1>
-      <h2 class="text-xs text-gray-600 mt-2">Enter your payment details below to purchase.</h2>
+      <h2 class="mt-2 text-xs text-gray-600">Enter your payment details below to purchase.</h2>
       <form class="grid grid-cols-4 gap-4 mt-4">
         <div class="col-span-4">
-          <label class="mb-1 block text-sm text-gray-600 font-semibold" for="email">Email address</label>
-          <input class="w-full rounded-lg border-gray-200 p-2 text-sm placeholder-gray-400 focus:ring-0 focus:border-blue-500" type="email" id="email" placeholder="example@email.com" />
+          <label class="block mb-1 text-sm font-semibold text-gray-600" for="email">Email address</label>
+          <input class="w-full p-2 text-sm placeholder-gray-400 border-gray-200 rounded-lg focus:ring-0 focus:border-blue-500" type="email" id="email" placeholder="example@email.com" />
         </div>
         <div class="col-span-4">
-          <label class="mb-1 block text-sm text-gray-600 font-semibold" for="name">Full name</label>
-          <input class="w-full rounded-lg border-gray-200 p-2 text-sm placeholder-gray-400 focus:ring-0 focus:border-blue-500" type="text" id="name" placeholder="John Doe" />
+          <label class="block mb-1 text-sm font-semibold text-gray-600" for="name">Full name</label>
+          <input class="w-full p-2 text-sm placeholder-gray-400 border-gray-200 rounded-lg focus:ring-0 focus:border-blue-500" type="text" id="name" placeholder="John Doe" />
         </div>
         <div class="col-span-4">
-          <label class="mb-1 block text-sm text-gray-600 font-semibold" for="card">Card number</label>
-          <input class="w-full rounded-lg border-gray-200 p-2 text-sm placeholder-gray-400 focus:ring-0 focus:border-blue-500" type="text" id="card" placeholder="1234 1234 1234 1234" />
+          <label class="block mb-1 text-sm font-semibold text-gray-600" for="card">Card number</label>
+          <input class="w-full p-2 text-sm placeholder-gray-400 border-gray-200 rounded-lg focus:ring-0 focus:border-blue-500" type="text" id="card" placeholder="1234 1234 1234 1234" />
         </div>
         <div class="col-span-2">
-          <label class="mb-1 block text-sm text-gray-600 font-semibold" for="cvv">CVV</label>
-          <input class="w-full rounded-lg border-gray-200 p-2 text-sm placeholder-gray-400 focus:ring-0 focus:border-blue-500" type="password" id="cvv" placeholder="123" />
+          <label class="block mb-1 text-sm font-semibold text-gray-600" for="cvv">CVV</label>
+          <input class="w-full p-2 text-sm placeholder-gray-400 border-gray-200 rounded-lg focus:ring-0 focus:border-blue-500" type="password" id="cvv" placeholder="123" />
         </div>
         <div class="col-span-1">
-          <label class="mb-1 block text-sm text-gray-600 font-semibold" for="month">Month</label>
-          <input class="w-full rounded-lg border-gray-200 p-2 text-sm placeholder-gray-400 focus:ring-0 focus:border-blue-500" type="text" id="month" placeholder="MM" />
+          <label class="block mb-1 text-sm font-semibold text-gray-600" for="month">Month</label>
+          <input class="w-full p-2 text-sm placeholder-gray-400 border-gray-200 rounded-lg focus:ring-0 focus:border-blue-500" type="text" id="month" placeholder="MM" />
         </div>
         <div class="col-span-1">
-          <label class="mb-1 block text-sm text-gray-600 font-semibold" for="year">Year</label>
-          <input class="w-full rounded-lg border-gray-200 p-2 text-sm placeholder-gray-400 focus:ring-0 focus:border-blue-500" type="text" id="year" placeholder="YYYY" />
+          <label class="block mb-1 text-sm font-semibold text-gray-600" for="year">Year</label>
+          <input class="w-full p-2 text-sm placeholder-gray-400 border-gray-200 rounded-lg focus:ring-0 focus:border-blue-500" type="text" id="year" placeholder="YYYY" />
         </div>
         <div class="col-span-3">
-          <label class="mb-1 block text-sm text-gray-600 font-semibold" for="country">Country</label>
-          <select class="w-full rounded-lg border-gray-200 p-2 text-sm placeholder-gray-400 focus:ring-0 focus:border-blue-500" type="text" id="country" placeholder="">
+          <label class="block mb-1 text-sm font-semibold text-gray-600" for="country">Country</label>
+          <select class="w-full p-2 text-sm placeholder-gray-400 border-gray-200 rounded-lg focus:ring-0 focus:border-blue-500" type="text" id="country" placeholder="">
             <option>Australia</option>
             <option>Canada</option>
             <option>Denmark</option>
@@ -40,11 +40,11 @@
           </select>
         </div>
         <div class="col-span-1">
-          <label class="mb-1 block text-sm text-gray-600 font-semibold" for="zip">ZIP</label>
-          <input class="w-full rounded-lg border-gray-200 p-2 text-sm placeholder-gray-400 focus:ring-0 focus:border-blue-500" type="text" id="zip" placeholder="12345" />
+          <label class="block mb-1 text-sm font-semibold text-gray-600" for="zip">ZIP</label>
+          <input class="w-full p-2 text-sm placeholder-gray-400 border-gray-200 rounded-lg focus:ring-0 focus:border-blue-500" type="text" id="zip" placeholder="12345" />
         </div>
         <div class="col-span-4">
-          <button type="submit" class="bg-black p-3 rounded-lg text-white w-full text-sm">Complete payment - <span class="font-semibold">$180.00</span></button>
+          <button type="submit" class="w-full p-3 text-sm text-white bg-black rounded-lg">Complete payment - <span class="font-semibold">$180.00</span></button>
         </div>
       </form>
     </section>
