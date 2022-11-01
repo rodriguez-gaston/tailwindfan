@@ -17,34 +17,42 @@ const CategoryPage: NextPage = ({ category }: any) => {
   return (
     <>
       <Head>
-        <title>{`TailwindFan | ${categoryData?.name}`}</title>
+        <title>{categoryData?.name} Blocks | TailwindFan</title>
         <meta
           name="description"
-          content={`Find free ${categoryData?.name} componentes for your next project. We have ${categoryData?.blocks.length} ${categoryData?.url} blocks free to use. We are working every day to add more components.`}
-          key="desc"
+          content={`${categoryData?.name} free componentes for your next project.`}
+          key="description"
         />
         <meta
           property="og:title"
-          content={`TailwindFan | ${categoryData?.name}`}
+          content={`${categoryData?.name} Blocks | TailwindFan`}
+          key="og:title"
         />
         <meta
           property="og:description"
-          content={`Find free ${categoryData?.name} componentes for your next project. We have ${categoryData?.blocks.length} ${categoryData?.url} blocks free to use. We are working every day to add more components.`}
+          content={`${categoryData?.name} free componentes for your next project.`}
+          key="og:description"
         />
         <meta
-          property="og:url"
-          content={`https://www.tailwindfan.com/blocks/${categoryData?.url}`}
+          property="twitter:title"
+          content={`${categoryData?.name} Blocks | TailwindFan`}
+          key="twitter:title"
+        />
+        <meta
+          property="twitter:description"
+          content={`${categoryData?.name} free componentes for your next project.`}
+          key="twitter:description"
         />
       </Head>
 
-      <section className="py-5 sm:py-10 px-2 sm:px-8">
-        <section className="max-w-7xl mx-auto space-y-6 sm:space-y-12">
+      <section className="px-2 py-5 sm:py-10 sm:px-8">
+        <section className="mx-auto space-y-6 max-w-7xl sm:space-y-12">
           <SectionBar
             title={categoryData?.name ?? ''}
             backlinkText="Back to all blocks"
             backlinkUrl="/blocks"
           >
-            <section className="lg:flex gap-2 hidden">
+            <section className="hidden gap-2 lg:flex">
               <BreakpointList setViewSize={setViewSize} />
             </section>
           </SectionBar>

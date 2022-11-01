@@ -32,21 +32,32 @@ export default function Home() {
           name="google-site-verification"
           content="suXfaBTZmYSOCmEBCTRROL3d_wHkEl8IGqwjrp-iW60"
         />
-        <title>TailwindFan | Tailwind CSS blocks and tutorials</title>
+        <title>TailwindCSS blocks and tutorials | TailwindFan</title>
         <meta
           name="description"
-          content="A complete library with Tailwind CSS UI blocks and components ready to use for any kind of project. Also you can learn about Tailwind CSS."
-          key="desc"
+          content="A complete library with TailwindCSS UI blocks and components ready to use for any kind of project. Also you can learn about TailwindCSS."
+          key="description"
         />
         <meta
           property="og:title"
-          content="Build your next project with a new look"
+          content="TailwindCSS blocks and tutorials | TailwindFan"
+          key="og:title"
         />
         <meta
           property="og:description"
-          content="Find free TailwindCSS componentes for your next project. We have more than 50 UI blocks free to use. We are working every day to add more categories and components."
+          content="A complete library with TailwindCSS UI blocks and components ready to use for any kind of project. Also you can learn about TailwindCSS."
+          key="og:description"
         />
-        <meta property="og:url" content="https://www.tailwindfan.com" />
+        <meta
+          property="twitter:title"
+          content="TailwindCSS blocks and tutorials | TailwindFan"
+          key="twitter:title"
+        />
+        <meta
+          property="twitter:description"
+          content="A complete library with TailwindCSS UI blocks and components ready to use for any kind of project. Also you can learn about TailwindCSS."
+          key="twitter:description"
+        />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="canonical"

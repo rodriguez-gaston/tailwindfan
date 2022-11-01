@@ -10,47 +10,63 @@ const BlocksPage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>TailwindFan | Blocks</title>
+        <title>Blocks | TailwindFan</title>
         <meta
           name="description"
           content="Find free TailwindCSS componentes for your next project. We have more
           than 50 UI blocks free to use. We are working every day to add more
           categories and components."
-          key="desc"
+          key="description"
         />
-        <meta property="og:title" content="TailwindFan | Blocks" />
+        <meta
+          property="og:title"
+          content="Blocks | TailwindFan"
+          key="og:title"
+        />
         <meta
           property="og:description"
           content="Find free TailwindCSS componentes for your next project. We have more
           than 50 UI blocks free to use. We are working every day to add more
           categories and components."
+          key="og:description"
         />
-        <meta property="og:url" content="https://www.tailwindfan.com/blocks" />
+        <meta
+          property="twitter:title"
+          content="Blocks | TailwindFan"
+          key="twitter:title"
+        />
+        <meta
+          property="twitter:description"
+          content="Find free TailwindCSS componentes for your next project. We have more
+          than 50 UI blocks free to use. We are working every day to add more
+          categories and components."
+          key="twitter:description"
+        />
       </Head>
 
-      <section className="py-10 px-8">
-        <section className="max-w-7xl mx-auto py-4 space-y-4">
-          <h1 className="font-bold text-gray-800 text-3xl md:text-5xl">
+      <section className="px-8 py-10">
+        <section className="py-4 mx-auto space-y-4 max-w-7xl">
+          <h1 className="text-3xl font-bold text-gray-800 md:text-5xl">
             Blocks
           </h1>
-          <h3 className="text-md text-gray-500">
+          <h3 className="text-gray-500 text-md">
             Find free TailwindCSS componentes for your next project. We have
             more than 50 UI blocks free to use. We are working every day to add
             more categories and components.
           </h3>
         </section>
-        <section className="max-w-7xl items-center justify-between mx-auto mt-5 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <section className="grid items-center justify-between grid-cols-1 gap-4 mx-auto mt-5 max-w-7xl sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {data.map((category) => {
             const blockCount = category.blocks.length;
 
             return (
               <Link href={`/blocks/${category.url}`} key={category.name}>
-                <a className="p-4 rounded-lg border-2 border-blue-800 hover:bg-blue-800 hover:text-white flex flex-col items-center gap-2">
-                  <section className="flex justify-between items-center w-full">
-                    <div className="flex gap-1 items-center">
+                <a className="flex flex-col items-center gap-2 p-4 border-2 border-blue-800 rounded-lg hover:bg-blue-800 hover:text-white">
+                  <section className="flex items-center justify-between w-full">
+                    <div className="flex items-center gap-1">
                       <h2 className="font-bold">{category.name}</h2>
                       {category.isNew && (
-                        <p className="text-xs p-1 rounded bg-blue-300 text-white">
+                        <p className="p-1 text-xs text-white bg-blue-300 rounded">
                           NEW
                         </p>
                       )}

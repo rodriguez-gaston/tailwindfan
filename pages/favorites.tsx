@@ -31,25 +31,36 @@ const FavoritesPage = () => {
   return (
     <>
       <Head>
-        <title>TailwindFan | Favorites</title>
+        <title>Favorites | TailwindFan</title>
         <meta
           name="description"
           content="Find your favorite blocks and colors."
-          key="desc"
+          key="description"
         />
-        <meta property="og:title" content="TailwindFan | Favorites" />
+        <meta
+          property="og:title"
+          content="Favorites | TailwindFan"
+          key="og:title"
+        />
         <meta
           property="og:description"
           content="Find your favorite blocks and colors."
+          key="og:description"
         />
         <meta
-          property="og:url"
-          content="https://www.tailwindfan.com/favorites"
+          property="twitter:title"
+          content="Favorites | TailwindFan"
+          key="twitter:title"
+        />
+        <meta
+          property="twitter:description"
+          content="Find your favorite blocks and colors."
+          key="twitter:description"
         />
       </Head>
 
-      <section className="py-5 sm:py-10 px-2 sm:px-8 space-y-10">
-        <section className="max-w-7xl mx-auto space-y-3">
+      <section className="px-2 py-5 space-y-10 sm:py-10 sm:px-8">
+        <section className="mx-auto space-y-3 max-w-7xl">
           {blocksList && blocksList?.length > 0 ? (
             <>
               <SectionBar
@@ -57,7 +68,7 @@ const FavoritesPage = () => {
                 backlinkText="Back to all blocks"
                 backlinkUrl="/blocks"
               >
-                <section className="lg:flex gap-2 hidden">
+                <section className="hidden gap-2 lg:flex">
                   <BreakpointList setViewSize={setViewSize} />
                 </section>
               </SectionBar>
@@ -81,7 +92,7 @@ const FavoritesPage = () => {
             </>
           ) : (
             <>
-              <h1 className="font-bold text-gray-800 text-3xl md:text-5xl">
+              <h1 className="text-3xl font-bold text-gray-800 md:text-5xl">
                 Favorite Blocks
               </h1>
               <EmptyState
@@ -92,7 +103,7 @@ const FavoritesPage = () => {
             </>
           )}
         </section>
-        <section className="max-w-7xl mx-auto space-y-3">
+        <section className="mx-auto space-y-3 max-w-7xl">
           {colorsList && colorsList.length > 0 ? (
             <>
               <SectionBar
@@ -106,7 +117,7 @@ const FavoritesPage = () => {
                   )}
                 </section>
               </SectionBar>
-              <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 {colorsList.map((color: IColor) => {
                   return (
                     <Color
@@ -123,7 +134,7 @@ const FavoritesPage = () => {
             </>
           ) : (
             <>
-              <h1 className="font-bold text-gray-800 text-3xl md:text-5xl">
+              <h1 className="text-3xl font-bold text-gray-800 md:text-5xl">
                 Favorite Colors
               </h1>
               <EmptyState

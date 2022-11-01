@@ -14,22 +14,36 @@ const ColorsPage = () => {
   return (
     <>
       <Head>
-        <title>TailwindFan | Colors</title>
+        <title>Colors | TailwindFan</title>
         <meta
           name="description"
           content="Find beatiful gradients to use in any TailwindCSS project."
-          key="desc"
+          key="description"
         />
-        <meta property="og:title" content="TailwindFan | Colors" />
+        <meta
+          property="og:title"
+          content="Colors | TailwindFan"
+          key="og:title"
+        />
         <meta
           property="og:description"
           content="Find beatiful gradients to use in any TailwindCSS project."
+          key="og:description"
         />
-        <meta property="og:url" content="https://www.tailwindfan.com/colors" />
+        <meta
+          property="twitter:title"
+          content="Colors | TailwindFan"
+          key="twitter:title"
+        />
+        <meta
+          property="twitter:description"
+          content="Find beatiful gradients to use in any TailwindCSS project."
+          key="twitter:description"
+        />
       </Head>
 
-      <section className="bg-gradient-to-b from-white to-cyan-50 py-5 sm:py-10 px-2 sm:px-8">
-        <section className="max-w-7xl mx-auto space-y-6 sm:space-y-12">
+      <section className="px-2 py-5 bg-gradient-to-b from-white to-cyan-50 sm:py-10 sm:px-8">
+        <section className="mx-auto space-y-6 max-w-7xl sm:space-y-12">
           <SectionBar
             title="Colors"
             backlinkText="Back to Home"
@@ -39,7 +53,7 @@ const ColorsPage = () => {
               <DirectionList setDirection={setGradientDirection} />
             </section>
           </SectionBar>
-          <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {colorsData.map((color) => {
               return (
                 <Color
