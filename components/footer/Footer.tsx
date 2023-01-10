@@ -9,15 +9,15 @@ import SocialLink from '@/components/buttons/SocialLink';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 p-8">
-      <section className="max-w-7xl w-full mx-auto space-y-4">
-        <section className="flex flex-col sm:flex-row gap-4 justify-between items-start">
-          <section className="space-y-2 col-span-1">
-            <Link href="/">
+    <footer className="p-8 bg-gray-100">
+      <section className="w-full mx-auto space-y-4 max-w-7xl">
+        <section className="flex flex-col items-start justify-between gap-4 sm:flex-row">
+          <section className="col-span-1 space-y-2">
+            <Link href="/" legacyBehavior>
               <a>
-                <section className="text-blue-500 flex gap-2 items-center">
+                <section className="flex items-center gap-2 text-blue-500">
                   <Logo />
-                  <span className="text-gray-800 font-bold text-lg">
+                  <span className="text-lg font-bold text-gray-800">
                     TailwindFan
                   </span>
                 </section>
@@ -27,13 +27,19 @@ const Footer = () => {
               Tailwind blocks ready to use
             </p>
           </section>
-          <section className="col-span-1 flex gap-8 text-gray-800 text-sm font-medium">
-            <Link href="/blocks">Blocks</Link>
-            <Link href="/colors">Colors</Link>
-            <Link href="/favorites">Favorites</Link>
+          <section className="flex col-span-1 gap-8 text-sm font-medium text-gray-800">
+            <Link href="/blocks" legacyBehavior>
+              Blocks
+            </Link>
+            <Link href="/colors" legacyBehavior>
+              Colors
+            </Link>
+            <Link href="/favorites" legacyBehavior>
+              Favorites
+            </Link>
           </section>
         </section>
-        <section className="col-span-1 lg:col-span-2 space-y-2">
+        <section className="col-span-1 space-y-2 lg:col-span-2">
           <p className="text-xs text-gray-500">
             by{' '}
             <a
