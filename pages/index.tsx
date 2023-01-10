@@ -94,7 +94,11 @@ export default function Home() {
 
             if (index < 8) {
               return (
-                <Link href={`/blocks/${category.url}`} key={category.name}>
+                <Link
+                  href={`/blocks/${category.url}`}
+                  key={category.name}
+                  legacyBehavior
+                >
                   <a className="flex flex-col items-center gap-2 p-4 border-2 border-blue-800 rounded-lg hover:bg-blue-800 hover:text-white">
                     <section className="flex items-center justify-between w-full">
                       <div className="flex items-center gap-1">
@@ -124,7 +128,7 @@ export default function Home() {
           })}
         </section>
         <section className="mx-auto mt-8 text-center max-w-7xl">
-          <Link href="/blocks">
+          <Link href="/blocks" legacyBehavior>
             <a className="px-4 py-3 text-white transition duration-300 bg-blue-700 border-2 border-blue-700 rounded-lg hover:border-blue-900 hover:bg-blue-900">
               Browse all Blocks
             </a>
@@ -153,7 +157,7 @@ export default function Home() {
             })}
           </section>
           <section className="mx-auto mt-8 text-center max-w-7xl">
-            <Link href="/colors">
+            <Link href="/colors" legacyBehavior>
               <a className="px-4 py-3 text-white transition duration-300 bg-blue-700 border-2 border-blue-700 rounded-lg hover:border-blue-900 hover:bg-blue-900">
                 Browse all Colors
               </a>
