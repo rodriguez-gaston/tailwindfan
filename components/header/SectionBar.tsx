@@ -39,10 +39,10 @@ const SectionBar = ({ title, backlinkText, backlinkUrl, children }: Props) => {
       }`}
     >
       <section>
-        <Link href={backlinkUrl}>
-          <a className="text-gray-500 text-sm">&larr;{` ${backlinkText}`}</a>
+        <Link href={backlinkUrl} legacyBehavior>
+          <a className="text-sm text-gray-500">&larr;{` ${backlinkText}`}</a>
         </Link>
-        <h1 className="font-bold text-gray-800 text-xl md:text-3xl">{title}</h1>
+        <h1 className="text-xl font-bold text-gray-800 md:text-3xl">{title}</h1>
       </section>
       {children}
     </section>
