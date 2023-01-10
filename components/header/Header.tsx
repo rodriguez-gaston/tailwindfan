@@ -4,22 +4,28 @@ import Logo from '@/components/header/Logo';
 
 const Header = () => {
   return (
-    <header className="border-b border-gray-300 flex items-center px-8 py-2">
-      <section className="max-w-7xl flex md:flex-row flex-col gap-2 items-center justify-between w-full mx-auto">
-        <Link href="/">
+    <header className="flex items-center px-8 py-2 border-b border-gray-300">
+      <section className="flex flex-col items-center justify-between w-full gap-2 mx-auto max-w-7xl md:flex-row">
+        <Link href="/" legacyBehavior>
           <a>
-            <section className="text-blue-500 flex gap-2 items-center">
+            <section className="flex items-center gap-2 text-blue-500">
               <Logo />
-              <span className="text-gray-800 font-bold text-lg">
+              <span className="text-lg font-bold text-gray-800">
                 TailwindFan
               </span>
             </section>
           </a>
         </Link>
-        <nav className="text-gray-800 font-semibold text-sm items-center justify-end gap-4 flex">
-          <Link href="/blocks">Blocks</Link>
-          <Link href="/colors">Colors</Link>
-          <Link href="/favorites">Favorites</Link>
+        <nav className="flex items-center justify-end gap-4 text-sm font-semibold text-gray-800">
+          <Link href="/blocks" legacyBehavior>
+            Blocks
+          </Link>
+          <Link href="/colors" legacyBehavior>
+            Colors
+          </Link>
+          <Link href="/favorites" legacyBehavior>
+            Favorites
+          </Link>
         </nav>
       </section>
     </header>
