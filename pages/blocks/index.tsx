@@ -60,7 +60,11 @@ const BlocksPage: NextPage = () => {
             const blockCount = category.blocks.length;
 
             return (
-              <Link href={`/blocks/${category.url}`} key={category.name}>
+              <Link
+                href={`/blocks/${category.url}`}
+                key={category.name}
+                legacyBehavior
+              >
                 <a className="flex flex-col items-center gap-2 p-4 border-2 border-blue-800 rounded-lg hover:bg-blue-800 hover:text-white">
                   <section className="flex items-center justify-between w-full">
                     <div className="flex items-center gap-1">
